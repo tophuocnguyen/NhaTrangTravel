@@ -1,0 +1,107 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner" data-page="page-name-room-header">
+
+
+        </div>
+        <script id="my-name-room-header" type="text/template7">
+            <div class="left">
+                <a class="link back" data-ignore-cache="true"  data-reload-previous="true">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title">{{name_title}}</div>
+        </script>
+    </div>
+    
+
+    <div class="page-content">
+        <span class="item-image" data-page="page-name-room-image">
+
+        </span>
+        <script id="my-name-room-image" type="text/template7">
+            <img src="{{image}}" style="width: 100%" />
+        </script>
+        <br/>
+
+        <div class="list media-list">
+            <ul>
+                <li>
+                    <span class="item-content" style="margin-top: -40px;">
+                        <div class="item-media">
+                            <i class="material-icons" style="font-size: 50px; color: lightgrey">hotel</i>
+                        </div>
+                        <div class="item-inner" data-page="page-name-room-content">
+
+                        </div>
+                        <script id="my-name-room-content" type="text/template7">
+                            
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                        </script>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list" style="margin-top: -20px;">
+            <ul>
+                <li>
+                    <span class="item-content">
+                        <div class="item-inner" data-page="page-name-room-introduce">
+
+                        </div>
+                        <script id="my-name-room-introduce" type="text/template7">
+                            <div class="item-title" style="white-space: inherit;">
+                                    <div class="item-header" style="font-size: 15px;">Thông tin phòng</div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Giá phòng: {{price}}
+                                    </div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Số người ở: {{people}}
+                                    </div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Chiều rộng: {{acreage}}
+                                    </div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Số giường: {{bedroom}}
+                                    </div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Số phòng tắm: {{bathroom}}
+                                    </div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Hút thuốc: {{#if smokingroom}} Có {{else}} Không {{/if}}
+                                    </div>
+                                </div>
+                                <div class="item-after"></div>
+                        </script>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="item-content">
+                        <div class="item-inner" data-page="page-name-room-description">
+
+                        </div>
+                        <script id="my-name-room-description" type="text/template7">
+                            <div class="item-title" style="white-space: inherit;">
+                                    <div class="item-header" style="font-size: 15px;">Thông tin khác</div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        {{directions}}
+                                    </div>
+                                </div>
+                                <div class="item-after"></div>
+                        </script>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="preloader infinite-scroll-preloader"></div>
+    </div>
+</div>

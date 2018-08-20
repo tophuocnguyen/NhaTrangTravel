@@ -1,0 +1,568 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+    background: #000000;
+}
+/* #map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0px;
+} */
+/* #left {
+    position: absolute;
+        top: 38%;
+       left: 5%;
+        z-index: 5;
+        padding: 5px;
+        border: 1px solid #999;
+        line-height: 30px;
+       padding-left: 10px;
+   height: 30%;
+    width: 64%;
+} */
+
+/* Optional: Makes the sample page fill the window. */
+
+/* html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #37424B;
+} */
+
+/* h3 {
+    text-align: center;
+} */
+
+/* #floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    
+    line-height: 30px;
+    padding-left: 10px;
+} */
+
+/* div.tab {
+    overflow: hidden;
+    background-color: blueviolet;
+} */
+
+/* Style the buttons inside the tab */
+
+/* div.tab button {
+    background-color: #6495ed;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 12px;
+    transition: 0.3s;
+    font-size: 10px;
+    width: 50%;
+    line-height: 1.5;
+    color: #cacec6;
+
+} */
+
+/* Change background color of buttons on hover */
+
+div.tab button:hover {
+    background-color: coral;
+    color: darkorchid;
+}
+
+/* Create an active/current tablink class */
+
+/* div.tab button.active {
+    background-color: #3d83ff;
+    color: white;
+
+}
+
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #3d83ff;
+    height: 91.3%;
+
+}
+
+#noiDung {
+   background: yellow;
+    margin: 10px;
+    border-color: white;
+    line-height: 20px;
+    padding: 10px;
+    color: black;
+    border-style: solid;
+    max-height: 40%; 
+}
+
+#anh {
+   
+    height: auto;
+    bottom: 10px;
+    position: absolute;
+    width: 27%;
+    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, .15), -1px -1px 6px 5px rgba(0, 0, 0, .1);
+    margin: 6px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+} */
+
+
+form#khungnhaplieu {
+
+    /* background: #9DEBED; */
+    counter-reset: fieldsets;
+    /* padding: 1px; */
+    width: 60%;
+    height: 100%
+
+}
+
+form#khungnhaplieu fieldset {
+    border: none;
+   /* margin-bottom: 5px; */
+}
+
+form#khungnhaplieu fieldset:last-of-type {
+    margin-bottom: 0;
+}
+
+form#khungnhaplieu legend {
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #c0d576;
+}
+
+form#khungnhaplieu > fieldset > legend:before {
+    counter-increment: fieldsets;
+}
+
+form#khungnhaplieu fieldset fieldset legend {
+    color: #111111;
+    font-size: 10px;
+    font-weight: normal;
+    padding-bottom: 0;
+}
+
+form#khungnhaplieu li {
+    background: #b9cf6a;
+    background: rgba(255, 255, 255, .3);
+    border-color: #e3ebc3;
+    border-color: rgba(255, 255, 255, .6);
+    border-style: solid;
+    border-width: 2px;
+    line-height: 25px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    width: 92%;
+}
+
+/* form#khungnhaplieu ol ol li {
+    background: none;
+    border: none;
+    float: left;
+} */
+
+form#khungnhaplieu label {
+    float: left;
+    font-size: 13px;
+    width: 89px;
+}
+
+form#khungnhaplieu fieldset fieldset label {
+    background: none no-repeat left 50%;
+    line-height: 20px;
+    padding: 0 0 0 30px;
+    width: auto;
+}
+
+form#khungnhaplieu label[for=visa] {
+    background-image: url(visa.gif);
+}
+
+form#khungnhaplieu label[for=amex] {
+    background-image: url(amex.gif);
+}
+
+form#khungnhaplieu label[for=mastercard] {
+    background-image: url(mastercard.gif);
+}
+
+form#khungnhaplieu fieldset fieldset label:hover {
+    cursor: pointer;
+}
+
+form#khungnhaplieu input:not([type=radio]),
+form#khungnhaplieu textarea {
+    background: #ffffff;
+    border: none;
+    outline: none;
+    padding: 3px;
+    width: 145px;
+}
+
+form#khungnhaplieu input:not([type=submit]):focus,
+form#khungnhaplieu textarea:focus {
+    background: #eaeaea;
+}
+
+form#khungnhaplieu input[type=radio] {
+    float: left;
+    margin-right: 5px;
+}
+
+form#khungnhaplieu button {
+    background: red;
+    border: none;
+    color: #ffffff;
+    /* display: block; */
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: auto;
+    /* padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000; */
+    text-transform: uppercase;
+    width: 35px;
+}
+
+form#khungnhaplieu button:hover {
+    background: #1e2506;
+    cursor: pointer;
+}
+
+ol {
+    -webkit-padding-start: 1px;
+}
+
+
+#taokhungODay{
+    background: #9DEBED;
+    counter-reset: fieldsets;
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+}
+form#khungnhaplieu select {
+    background: #ffffff;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 145px;
+}
+
+form#khungnhaplieu1 {
+
+    /* background: #9DEBED; */
+    counter-reset: fieldsets;
+    /* padding: 1px; */
+    width: 60%;
+    height: 100%
+
+}
+
+form#khungnhaplieu1 fieldset {
+    border: none;
+   /* margin-bottom: 5px; */
+}
+
+form#khungnhaplieu1 fieldset:last-of-type {
+    margin-bottom: 0;
+}
+
+form#khungnhaplieu1 legend {
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #c0d576;
+}
+
+form#khungnhaplieu1 > fieldset > legend:before {
+    counter-increment: fieldsets;
+}
+
+form#khungnhaplieu1 fieldset fieldset legend {
+    color: #111111;
+    font-size: 10px;
+    font-weight: normal;
+    padding-bottom: 0;
+}
+
+form#khungnhaplieu1 li {
+    background: #b9cf6a;
+    background: rgba(255, 255, 255, .3);
+    border-color: #e3ebc3;
+    border-color: rgba(255, 255, 255, .6);
+    border-style: solid;
+    border-width: 2px;
+    line-height: 25px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    width: 92%;
+}
+
+/* form#khungnhaplieu ol ol li {
+    background: none;
+    border: none;
+    float: left;
+} */
+
+form#khungnhaplieu1 label {
+    float: left;
+    font-size: 13px;
+    width: 89px;
+}
+
+form#khungnhaplieu1 fieldset fieldset label {
+    background: none no-repeat left 50%;
+    line-height: 20px;
+    padding: 0 0 0 30px;
+    width: auto;
+}
+
+form#khungnhaplieu1 label[for=visa] {
+    background-image: url(visa.gif);
+}
+
+form#khungnhaplieu1 label[for=amex] {
+    background-image: url(amex.gif);
+}
+
+form#khungnhaplieu1 label[for=mastercard] {
+    background-image: url(mastercard.gif);
+}
+
+form#khungnhaplieu1 fieldset fieldset label:hover {
+    cursor: pointer;
+}
+
+form#khungnhaplieu1 input:not([type=radio]),
+form#khungnhaplieu1 textarea {
+    background: #ffffff;
+    border: none;
+    outline: none;
+    padding: 3px;
+    width: 145px;
+}
+
+form#khungnhaplieu1 input:not([type=submit]):focus,
+form#khungnhaplieu1 textarea:focus {
+    background: #eaeaea;
+}
+
+form#khungnhaplieu1 input[type=radio] {
+    float: left;
+    margin-right: 5px;
+}
+
+form#khungnhaplieu1 button {
+    background: red;
+    border: none;
+    color: #ffffff;
+    /* display: block; */
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: auto;
+    /* padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000; */
+    text-transform: uppercase;
+    width: 35px;
+}
+
+form#khungnhaplieu1 button:hover {
+    background: #1e2506;
+    cursor: pointer;
+}
+
+ol {
+    -webkit-padding-start: 1px;
+}
+
+
+form#khungnhaplieu1 select {
+    background: #ffffff;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 145px;
+}
+
+form#khungnhaplieu2 {
+
+    /* background: #9DEBED; */
+    counter-reset: fieldsets;
+    /* padding: 1px; */
+    width: 60%;
+    height: 100%
+
+}
+
+form#khungnhaplieu2 fieldset {
+    border: none;
+   /* margin-bottom: 5px; */
+}
+
+form#khungnhaplieu2 fieldset:last-of-type {
+    margin-bottom: 0;
+}
+
+form#khungnhaplieu2 legend {
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #c0d576;
+}
+
+form#khungnhaplieu2 > fieldset > legend:before {
+    counter-increment: fieldsets;
+}
+
+form#khungnhaplieu2 fieldset fieldset legend {
+    color: #111111;
+    font-size: 10px;
+    font-weight: normal;
+    padding-bottom: 0;
+}
+
+form#khungnhaplieu2 li {
+    background: #b9cf6a;
+    background: rgba(255, 255, 255, .3);
+    border-color: #e3ebc3;
+    border-color: rgba(255, 255, 255, .6);
+    border-style: solid;
+    border-width: 2px;
+    line-height: 25px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    width: 92%;
+}
+
+/* form#khungnhaplieu ol ol li {
+    background: none;
+    border: none;
+    float: left;
+} */
+
+form#khungnhaplieu2 label {
+    float: left;
+    font-size: 13px;
+    width: 89px;
+}
+
+form#khungnhaplieu2 fieldset fieldset label {
+    background: none no-repeat left 50%;
+    line-height: 20px;
+    padding: 0 0 0 30px;
+    width: auto;
+}
+
+form#khungnhaplieu2 label[for=visa] {
+    background-image: url(visa.gif);
+}
+
+form#khungnhaplieu2 label[for=amex] {
+    background-image: url(amex.gif);
+}
+
+form#khungnhaplieu2 label[for=mastercard] {
+    background-image: url(mastercard.gif);
+}
+
+form#khungnhaplieu2 fieldset fieldset label:hover {
+    cursor: pointer;
+}
+
+form#khungnhaplieu2 input:not([type=radio]),
+form#khungnhaplieu2 textarea {
+    background: #ffffff;
+    border: none;
+    outline: none;
+    padding: 3px;
+    width: 145px;
+}
+
+form#khungnhaplieu2 input:not([type=submit]):focus,
+form#khungnhaplieu2 textarea:focus {
+    background: #eaeaea;
+}
+
+form#khungnhaplieu2 input[type=radio] {
+    float: left;
+    margin-right: 5px;
+}
+
+form#khungnhaplieu2 button {
+    background: red;
+    border: none;
+    color: #ffffff;
+    /* display: block; */
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: auto;
+    /* padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000; */
+    text-transform: uppercase;
+    width: 35px;
+}
+
+form#khungnhaplieu2 button:hover {
+    background: #1e2506;
+    cursor: pointer;
+}
+
+ol {
+    -webkit-padding-start: 1px;
+}
+
+
+form#khungnhaplieu2 select {
+    background: #ffffff;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 145px;
+}
+
+H3{
+    background: red;
+    border: none;
+    color: #ffffff;
+    display: block;
+    font: 18px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: 20px;
+    padding: 12px 25px;
+    text-shadow: 0 1px 1px #000000;
+    text-transform: uppercase;
+} 

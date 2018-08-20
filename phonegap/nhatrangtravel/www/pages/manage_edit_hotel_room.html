@@ -1,0 +1,198 @@
+<div class="page" data-name="manage-edit-hotel-room">
+        <div class="navbar">
+          <div class="navbar-inner sliding">
+            <div class="left">
+              <a href="#" class="link back">
+                <i class="icon icon-back"></i>
+                <span class="ios-only">Back</span>
+              </a>
+            </div>
+            <div class="title" style="text-align: center; width: 100%;">Sửa phòng</div>
+      
+          </div>
+        </div>
+        <div class="page-content">
+          <form class="list" id="my-form-edit-room">
+            <div class="list accordion-list">
+              <ul>
+                  <li>
+                      <a class="item-link smart-select smart-select-init typehotel" data-open-in="sheet">
+                      <select name="typehotel" id="typehotel">
+      
+                      </select>
+                      <div class="item-content">
+                          <div class="item-inner">
+                          <div class="item-title">Loại phòng</div>
+                          </div>
+                      </div>
+                      </a>
+                  </li>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Nhập thông tin phòng</div>
+                      <div class="item-input-wrap">
+                              <textarea id="name" name="name" placeholder="Nhập nội dung" required validate ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Chọn hình ảnh</div>
+                    <div class="item-input-wrap">
+                      <div class="fileUpload button button-fill">
+                        <span>
+                          <i class="material-icons">camera_alt</i>
+                        </span>
+                        <input class="upload" id="inputFileToLoad" type="file" accept="image/*;capture=camera" />
+                      </div>
+      
+                      <div id="imgTest" name="IMG" style="text-align: center;">
+                        <img src="" id="image1" style="width: 44%;">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                      <div class="item-title item-label">Nhập số người ở tối đa</div>
+                      <div class="item-input-wrap">
+                          <input id="people" type="number" name="people" placeholder="Số người">
+                      </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                      <div class="item-title item-label">Nhập giá phòng</div>
+                      <div class="item-input-wrap">
+                          <input id="price" type="number" name="price" placeholder="Giá phòng">
+                      </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                      <div class="item-title item-label">Nhập nội dung phòng</div>
+                      <div class="item-input-wrap">
+                          <textarea id="directions" name="directions" placeholder="Nhập nội dung" required validate ></textarea>
+                      </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                      <div class="item-title item-label">Nhập độ rộng phòng</div>
+                      <div class="item-input-wrap">
+                          <input id="acreage" type="text" name="acreage" placeholder="Độ rộng phòng">
+                      </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                      <div class="item-title item-label">Nhập số giường ngủ</div>
+                      <div class="item-input-wrap">
+                          <input id="bedroom" type="number" name="bedroom" placeholder="Số giường">
+                      </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                      <div class="item-title item-label">Nhập số phòng tắm</div>
+                      <div class="item-input-wrap">
+                          <input id="bathroom" type="number" name="bathroom" placeholder="Số phòng tắm">
+                      </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li>
+                      <a class="item-link smart-select smart-select-init smorkingroom" data-open-in="sheet">
+                          <select name="smorkingroom" id="smorkingroom">
+                              <option value="0" selected>Không</option>
+                              <option value="1">Có</option>
+                          </select>
+                          <div class="item-content">
+                              <div class="item-inner">
+                                  <div class="item-title">Hút thuốc</div>
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="item-link smart-select smart-select-init bathtub" data-open-in="sheet">
+                          <select name="bathtub" id="bathtub">
+                              <option value="0" selected>Không</option>
+                              <option value="1">Có</option>
+                          </select>
+                          <div class="item-content">
+                              <div class="item-inner">
+                                  <div class="item-title">Vòi sen</div>
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="item-link smart-select smart-select-init balcony" data-open-in="sheet">
+                          <select name="balcony" id="balcony">
+                              <option value="0" selected>Không</option>
+                              <option value="1">Có</option>
+                          </select>
+                          <div class="item-content">
+                              <div class="item-inner">
+                                  <div class="item-title">Ban công</div>
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="item-link smart-select smart-select-init wifi" data-open-in="sheet">
+                          <select name="wifi" id="wifi">
+                              <option value="0" selected>Không</option>
+                              <option value="1">Có</option>
+                          </select>
+                          <div class="item-content">
+                              <div class="item-inner">
+                                  <div class="item-title">Wifi</div>
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="item-link smart-select smart-select-init status" data-open-in="sheet">
+                          <select name="status" id="status">
+                              <option value="1" selected>Không</option>
+                              <option value="0">Có</option>
+                          </select>
+                          <div class="item-content">
+                              <div class="item-inner">
+                                  <div class="item-title">Riêng tư</div>
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+              </ul>
+            </div>
+      
+            <!-- <div class="col"><a class="button button-fill button-round add-image" href="#">ADD</a></div> -->
+          </form>
+          <div class="block block-strong row">
+            <div class="col">
+              <a class="button edit-room" href="#">Tải lên</a>
+            </div>
+          </div>
+          <script id="my-typehotel" type="text/template7">
+              <option value="{{typehotel_id}}">{{typehotel_name}}</option>
+          </script>
+      
+        </div>
+      </div>
+      

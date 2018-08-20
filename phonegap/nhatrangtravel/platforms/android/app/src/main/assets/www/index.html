@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html manifest="manifest.php">
+
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Nha Trang Travel</title>
+
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/rating.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Left Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Left panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Right panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs ios-edges">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar-labels toolbar-bottom-md toolbar-index">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="icon icon-fill f7-icons ios-only">credit_card_fill
+              <!--<span class="badge color-green"></span>-->
+            </i>
+            <i class="icon material-icons md-only">credit_card
+              <!--<span class="badge color-green"></span>-->
+            </i>
+            <span class="tabbar-label" style="font-size: 11px;">Home</span>
+          </a>
+          <a href="#view-explore" class="tab-link">
+            <i class="icon f7-icons ios-only">explore</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">explore_fill</i>
+            <i class="icon material-icons md-only">explore</i>
+            <span class="tabbar-label" style="font-size: 11px;">Khám phá</span>
+          </a>
+          <a href="#view-favorite" class="tab-link">
+            <i class="icon f7-icons ios-only">favorite</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">favorite_fill</i>
+            <i class="icon material-icons md-only">favorite</i>
+            <span class="tabbar-label" style="font-size: 11px;">Yêu thích</span>
+          </a>
+          <a href="#view-notification" class="tab-link">
+            <i class="icon f7-icons ios-only">notifications</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">notifications</i>
+            <i class="icon material-icons md-only">notifications</i>
+            <span class="tabbar-label" style="font-size: 11px;">Có gì mới</span>
+          </a>
+          <a href="#view-menus" class="tab-link">
+            <i class="icon f7-icons ios-only">menu</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">menu_fill</i>
+            <i class="icon material-icons md-only">menu</i>
+            <span class="tabbar-label" style="font-size: 11px;">Menu</span>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="/map/" class="link">
+                  <i class="material-icons">near_me</i>
+                </a>
+              </div>
+              <div class="title" style="text-align: center; width: 100%;">Nha Trang</div>
+              <div class="right">
+                <a href="/messages/" class="link">
+                  <i class="material-icons">mail_outline</i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="fab fab-right-bottom">
+            <a href="#" style="background: #00CCCC; width: 45px; height: 45px;">
+                <!-- Icons For iOS Theme -->
+                <i class="icon f7-icons ios-only">add</i>
+                <i class="icon f7-icons ios-only">close</i>
+                <!-- Icons For MD Theme -->
+                <i class="icon material-icons md-only">add</i>
+                <i class="icon material-icons md-only">close</i>
+            </a>
+            <!-- FAB speed dial actions -->
+            <div class="fab-buttons fab-buttons-left">
+              <a href="/trip_calendar/" style="background: #00CCCC;">
+                <i class="material-icons">person_pin_circle</i>
+              </a>
+              <a href="/hotel_calendar/" style="background: #00CCCC;">
+                <i class="material-icons">hotel</i>
+              </a>
+              <a href="/restaurant_calendar/" style="background: #00CCCC;">
+                <i class="material-icons">restaurant</i>
+              </a>
+              <a href="/vehicle_calendar/" style="background: #00CCCC;">
+                <i class="material-icons">directions_bus</i>
+              </a>
+            </div>
+        </div>
+
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block" style="margin: 0 0; padding: 0 0;">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper" data-page="page-home-slide">
+
+                </div>
+              </div>
+            </div>
+            <script id="my-home-slide" type="text/template7">
+              <div class="swiper-slide" style="border: none;">
+                  <a href="#" class="pb-standalone-dark">
+                    <img src="{{image_slide}}" width="100%" />
+                  </a>
+                </div>
+          </script>
+            <div class="block" style="margin-top: -20px;">
+              <p class="row">
+                <a href="/search_regions/?slug=region" class="col button button-small button-round button-fill" style="text-transform:none; background-color: #00CCCC; ">Bạn muốn đi đâu?</a>
+              </p>
+              <div class="row">
+                <div class="col-auto">
+                  <a href="/search_regions/?slug=place" class="col button button-small button-round button-fill color-yellow" style="width: 50px; height: 65px;">
+                    <i class="material-icons" style="font-size: 32px;  padding: 16px 0 16px 0;">person_pin_circle</i>
+                  </a>
+                  <p style="text-align: center">
+                    <a class="link" href="/search_regions/?slug=place" style="color: #212121">Khám phá</a>
+                  </p>
+                </div>
+                <div class="col-auto">
+                  <a href="/search_regions/?slug=hotel" class="button button-small button-round button-fill color-violet" style="width: 50px; height: 65px; background-color: #66CCCC;" data-animate-pages="true">
+                    <i class="material-icons" style="font-size: 32px; padding: 16px 0 16px 0;">hotel</i>
+                  </a>
+                  <p style="text-align: center">
+                    <a class="link" href="/search_regions/?slug=hotel" style="color: #212121" data-animate-pages="true">Chỗ ở</a>
+                  </p>
+                </div>
+                <div class="col-auto">
+                  <a href="/search_regions/?slug=restaurant" class="button button-small button-round button-fill color-orange" style="width: 50px; height: 65px;">
+                    <i class="material-icons" style="font-size: 32px;  padding: 16px 0 16px 0;">restaurant</i>
+                  </a>
+                  <p style="text-align: center">
+                    <a class="link" href="/search_regions/?slug=restaurant" style="color: #212121">Ăn uống</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-auto">
+                  <a href="/list_events/" class="button button-small button-round button-fill color-green" style="width: 50px; height: 65px;">
+                    <i class="material-icons" style="font-size: 32px;  padding: 16px 0 16px 0;">event_note</i>
+                  </a>
+                  <p style="text-align: center">
+                    <a class="link" href="/list_events/" style="color: #212121">Sự kiện</a>
+                  </p>
+                </div>
+                <div class="col-auto">
+                  <a href="/search_regions/?slug=vehicle" class="col button button-small button-round button-fill color-red" style="width: 50px; height: 65px;">
+                    <i class="material-icons" style="font-size: 32px;  padding: 16px 0 16px 0;">directions_bus</i>
+                  </a>
+                  <p style="text-align: center">
+                    <a class="link" href="/search_regions/?slug=vehicle" style="color: #212121">Phương tiện</a>
+                  </p>
+                </div>
+                <div class="col-auto">
+                  <a href="/search_regions/?slug=tour" class="col button button-small button-round button-fill color-pink" style="width: 50px; height: 65px;">
+                    <i class="material-icons" style="font-size: 32px;  padding: 16px 0 16px 0;">terrain</i>
+                  </a>
+                  <p style="text-align: center">
+                    <a class="link" href="/search_regions/?slug=tour" style="color: #212121">Tour</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-title">
+              Điểm đến
+              <a class="link" href="/list_regions/" style="float: right; font-size: 13px;">
+                Xem thêm
+                <i class="material-icons">keyboard_arrow_right</i>
+              </a>
+            </div>
+
+            <div class="block">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">
+                <!--<div class="swiper-pagination"></div>-->
+                <div class="swiper-wrapper">
+                  <div data-page="list-regions" class="swiper-wrapper">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script id="my-regions" type="text/template7">
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                  <a href="/content_region/?region_id={{region_id}}" style="font-size: 14px; color: #212121">
+                  <img src="{{image_region}}" style="width: 100%" /> <br/>
+                  <span style="font-size: 14px; color: #212121">{{name_region}}</span>
+                  </a>
+                </div>
+          </script>
+
+            <div class="block-title">
+              Khám phá
+              <a class="link" href="/list_places/" style="float: right; font-size: 13px;">
+                Xem thêm
+                <i class="material-icons">keyboard_arrow_right</i>
+              </a>
+            </div>
+
+            <div class="block">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">
+                <!--<div class="swiper-pagination"></div>-->
+                <div class="swiper-wrapper" data-page="page-home-place">
+
+                </div>
+              </div>
+            </div>
+            <script id="my-home-place" type="text/template7">
+              {{#js_if "this.avg < 0.5"}}
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                  <a href="/content_place/?place_id={{place_id}}">
+                  <img src="{{image_place}}" style="width: 100%" /> <br/>
+                  <span style="font-size: 5px; color: #212121">
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  </span>
+                  <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                  <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                  <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                  </a>
+                </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_place/?place_id={{place_id}}">
+                <img src="{{image_place}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_place}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+          </script>
+
+            <div class="block-title">
+              Chỗ ở
+              <a class="link" href="/list_hotels/" style="float: right; font-size: 13px;">
+                Xem thêm
+                <i class="material-icons">keyboard_arrow_right</i>
+              </a>
+            </div>
+
+            <div class="block">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">
+                <!--<div class="swiper-pagination"></div>-->
+                <div class="swiper-wrapper" data-page="page-index-hotel">
+
+                </div>
+              </div>
+            </div>
+            <script id="my-index-hotel" type="text/template7">
+              {{#js_if "this.avg < 0.5"}}
+          <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+              <a href="/content_hotels/?hotel_id={{hotel_id}}">
+              <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+              <span style="font-size: 5px; color: #212121">
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+              </span>
+              <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+              <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+              <div style="font-size: 12px; color: #222222">{{kc}}</div>
+              </a>
+            </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_hotels/?hotel_id={{hotel_id}}">
+                <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_hotel}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+          </script>
+
+            <div class="block-title">
+              Ăn uống
+              <a class="link" href="/list_restaurants/" style="float: right; font-size: 13px;">
+                Xem thêm
+                <i class="material-icons">keyboard_arrow_right</i>
+              </a>
+            </div>
+
+            <div class="block">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">
+                <!--<div class="swiper-pagination"></div>-->
+                <div class="swiper-wrapper" data-page="page-home-restaurant">
+                  
+                </div>
+              </div>
+            </div>
+            <script id="my-home-restaurant" type="text/template7">
+              {{#js_if "this.avg < 0.5"}}
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                  <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                  <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                  <span style="font-size: 5px; color: #212121">
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  </span>
+                  <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                  <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                  <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                  </a>
+                </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_restaurant/?restaurant_id={{restaurant_id}}">
+                <img src="{{image_restaurant}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_restaurant}}</div>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                </a>
+              </div>
+            {{/js_if}
+          </script>
+
+            <div class="block-title">
+              Phương tiện
+              <a class="link" href="/list_vehicles/" style="float: right; font-size: 13px;">
+                Xem thêm
+                <i class="material-icons">keyboard_arrow_right</i>
+              </a>
+            </div>
+
+            <div class="block">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">
+                <!--<div class="swiper-pagination"></div>-->
+                <div class="swiper-wrapper" data-page="page-home-vehicle">
+                  
+                </div>
+              </div>
+            </div>
+            <script id="my-home-vehicle" type="text/template7">
+              {{#js_if "this.avg < 0.5"}}
+          <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+              <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+              <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+              <span style="font-size: 5px; color: #212121">
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+              </span>
+              <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+              <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+              </a>
+            </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_vehicle/?vehicle_id={{vehicle_id}}">
+                <img src="{{image_vehicle}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_vehicle}}</div>
+                </a>
+              </div>
+            {{/js_if}
+          </script>
+
+            <div class="block-title">
+              Tour
+              <a class="link" href="/list_tours/" style="float: right; font-size: 13px;">
+                Xem thêm
+                <i class="material-icons">keyboard_arrow_right</i>
+              </a>
+            </div>
+
+            <div class="block">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">
+                <!--<div class="swiper-pagination"></div>-->
+                <div class="swiper-wrapper" data-page="page-home-tour">
+                  
+                </div>
+              </div>
+            </div>
+            <script id="my-home-tour" type="text/template7">
+              {{#js_if "this.avg < 0.5"}}
+          <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+              <a href="/content_tour/?tour_id={{tour_id}}">
+              <img src="{{image_tour}}" style="width: 100%" /> <br/>
+              <span style="font-size: 5px; color: #212121">
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                  <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+              </span>
+              <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+              <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+              </a>
+            </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+              <div class="swiper-slide" style="border: none; width: 154px; margin-right: 20px;">
+                <a href="/content_tour/?tour_id={{tour_id}}">
+                <img src="{{image_tour}}" style="width: 100%" /> <br/>
+                <span style="font-size: 5px; color: #212121">
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                </span>
+                <span style="position: absolute; margin-left: 10px; font-size: 11px; margin-top: 6px; color: gray;">{{avg}}</span>
+                <div style="font-size: 14px; color: #212121">{{name_tour}}</div>
+                </a>
+              </div>
+            {{/js_if}
+          </script>
+          <div class="preloader infinite-scroll-preloader"></div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Explore View -->
+      <div id="view-explore" class="view tab">
+        <!-- Explore page will be loaded here dynamically from /explore/ route -->
+      </div>
+
+      <div id="view-notification" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+
+      <div id="view-favorite" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-menus" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Popup content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.
+                <br>Click "Sign In" to close Login Screen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script src="lib/framework7/js/framework7.min.v1.js"></script>
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/add-data.js"></script>
+  <script src="js/search-map.js"></script>
+  <script src="./js/template7.min.js"></script>
+  <script src="./js/lodash.js"></script>
+  <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe3M8awUbbNdyho0tHUfXGYMZsRBseyNY"></script>
+
+
+</body>
+
+</html>

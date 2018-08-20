@@ -1,0 +1,86 @@
+<div class="page" data-name="edit-review">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="ios-only">Back</span>
+            </a>
+          </div>
+          <div class="title">Sửa bài viết cảm nhận</div>
+          <div class="right" style="padding-right: 3%">
+              <a class="edit-review">Sửa</a>
+          </div>
+      </div>
+    </div>
+    <div class="page-content">
+    <form class="list" id="my-form" style="margin-top: -7%">
+        <div class="list accordion-list">
+          <ul>
+            <li>
+                <div class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                            <input type="text" name="title" placeholder="Tiêu đề bài viết" id="title">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+              <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                <select name="type">
+                  <option value="hotel" selected>Chỗ ở</option>
+                  <option value="restaurant">Quán ăn</option>
+                  <option value="place">Địa điểm vui chơi</option>
+                </select>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Loại địa điểm</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item-content item-input item-input-with-info" style="height: 29px;">
+              <div class="item-inner">
+                    <div class="item-input-wrap">
+                      <input type="text" name="address" placeholder="Địa chỉ" required validate id="address">
+                      <span class="input-clear-button"></span>
+                  </div>
+              </div>
+          </li>         
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-input-wrap">
+                    <textarea  required validate name="description" placeholder="Mô tả địa điểm" id="description"></textarea>
+                    <span class="input-clear-button"></span>
+              </div>
+            </div>
+        </li>
+      
+        <li class="item-content item-input">
+          <div class="item-inner" style="padding-bottom: 0px">
+            <div class="item-input-wrap">
+            <input id="inputFileToLoad" type="file" class="button button-big button-fill"/>
+            <div id="imgTest" name="IMG" class="review-image" data-page="page-content-review-image">
+          
+            </div>
+            <script id="my-content-review-image" type="text/template7">
+              <img src="{{image_avatar_review_change}}" id="image1" style="width: 44%;">
+            </script>
+            </div>
+          </div>
+      </li>
+
+      
+
+
+    </ul>
+        </div>
+        
+    </form>
+
+
+
+
+    </div>
+  </div>

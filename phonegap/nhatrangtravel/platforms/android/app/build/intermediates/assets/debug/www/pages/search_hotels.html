@@ -1,0 +1,373 @@
+<div class="page">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+          <a class="link back" data-ignore-cache="false"  data-reload-previous="false">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Chọn chỗ ở</div>
+        <div class="right">
+          <a href="/search_map_hotels/" class="link">
+            <i class="material-icons">map</i>
+          </a>
+        </div>
+        <div class="subnavbar">
+          <!-- Searchbar with auto init -->
+          <form class="searchbar searchbar-hotel">
+            <div class="searchbar-inner">
+              <div class="searchbar-input-wrap">
+                <input type="search" placeholder="Tìm kiếm chỗ ở">
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <span class="searchbar-disable-button">Cancel</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <div class="page-content">
+      <!-- Searchbar backdrop -->
+      <div class="searchbar-backdrop"></div>
+      <!-- hide-on-search element -->
+      <div class="block searchbar-hide-on-search">
+        <p>Vui lòng chọn tên chỗ ở cần tìm kiếm</p>
+      </div>
+      <!-- search target list -->
+      <div class="list searchbar-found media-list">
+        <div data-page="list-search-hotel" class="search-hotel">
+        <ul>
+          
+        </ul>
+        </div>
+        <script id="my-search-hotel" type="text/template7">
+          {{#js_if "this.avg < 0.5"}}
+          <li>
+              <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                <div class="item-media">
+                  <img src="{{image_hotel}}" style="width: 100px" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">{{name_hotel}}</div>
+                    <div class="item-after"></div>
+                  </div>
+                  <div class="item-text">
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                      <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                          {{avg}}
+                      </span>
+                  </div>
+                  <div class="item-subtitle">{{kc}}</div>
+                  <div class="item-text">
+                    {{description_hotel}}
+                  </div>
+                </div>
+              </a>
+            </li>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <li>
+                <a href="/content_hotels/?hotel_id={{hotel_id}}" class="item-link item-content">
+                  <div class="item-media">
+                    <img src="{{image_hotel}}" style="width: 100px" />
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">{{name_hotel}}</div>
+                      <div class="item-after"></div>
+                    </div>
+                    <div class="item-text">
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </div>
+                    <div class="item-subtitle">{{kc}}</div>
+                    <div class="item-text">
+                      {{description_hotel}}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {{/js_if}
+      </script>
+      </div>
+      <!-- Nothing found message -->
+      <div class="block searchbar-not-found">
+        <div class="block-inner">Không tìm thấy kết quả</div>
+      </div>
+    </div>
+  </div>

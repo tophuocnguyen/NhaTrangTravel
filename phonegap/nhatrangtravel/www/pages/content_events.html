@@ -1,0 +1,1468 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner" data-page="page-name-event-header">
+
+
+        </div>
+        <script id="my-name-event-header" type="text/template7">
+            <div class="left">
+                <a class="link back" data-ignore-cache="true"  data-reload-previous="true">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title">{{name_title}}</div>
+        </script>
+    </div>
+    <!-- FAB Right Bottom -->
+    <!-- Will morph to Toolbar -->
+    <div class="fab fab-right-bottom">
+        <a href="#" style="background: #00CCCC; width: 45px; height: 45px;">
+            <!-- Icons For iOS Theme -->
+            <i class="icon f7-icons ios-only">add</i>
+            <i class="icon f7-icons ios-only">close</i>
+            <!-- Icons For MD Theme -->
+            <i class="icon material-icons md-only">add</i>
+            <i class="icon material-icons md-only">close</i>
+        </a>
+        <!-- FAB speed dial actions -->
+        <div class="fab-buttons fab-buttons-left">
+            <a href="#" style="background: #00CCCC;" class="button-save-event">
+                
+            </a>
+            <a href="#" class="link popup-open" data-popup=".popup-rate-event" style="background: #00CCCC;">
+                <i class="material-icons">star</i>
+            </a>
+        </div>
+        <script id="button-save" type="text/template7">
+            {{#if status}}
+            <i class="material-icons">playlist_add_check</i>
+            {{else}}
+            <i class="material-icons">playlist_add</i>
+            {{/if}}
+        </script>
+    </div>
+    <div class="popup popup-rate-event">
+        <div class="block">
+            <p>
+                <form class="list" id="form-rate-event">
+                    <!-- <div class="block-title" style="color: #000;">Rating</div> -->
+                    <div class="list accordion-list">
+                        <ul>
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-input-wrap">
+                                            <div style="text-align: center; font-size: 25px;">Đánh giá</div>
+                                            <div class="rating" id="star-rating" style="text-align: center; font-size: 25px;">
+                                                <input type="radio" id="star5" name="rating" value="5" />
+                                                <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                                                <input type="radio" id="star4" name="rating" value="4" />
+                                                <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                                                <input type="radio" id="star3" name="rating" value="3" />
+                                                <label class="full" for="star3" title="Meh - 3 stars"></label>
+                                                <input type="radio" id="star2" name="rating" value="2" />
+                                                <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                                                <input type="radio" id="star1" name="rating" value="1" />
+                                                <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                                            </div>
+
+                                            <!-- <span id="info"></span> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="name" placeholder="Nhập tiêu đề">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                        <textarea placeholder="Descripton" required validate name="descripton" placeholder="Nhập nội dung"></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Custom Accordion -->
+                    <!-- <div class="col"><a class="button button-fill button-round add-evaluate link back" href="#">ADD</a></div> -->
+                </form>
+                <div class="block">
+                    <div class="row">
+                        <a href="#" class="link popup-close link-rate-event col button button-fill button-round">Gửi</a>
+                        <a href="#" class="link popup-close col button button-fill button-round">Đóng</a>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <span class="item-image" data-page="page-name-event-image">
+
+        </span>
+        <script id="my-name-event-image" type="text/template7">
+            <img src="{{image}}" style="width: 100%" />
+        </script>
+        <br/>
+        <div class="list media-list">
+            <ul>
+                <li>
+                    <span class="item-content" style="margin-top: -40px;">
+                        <div class="item-media">
+                            <i class="material-icons" style="font-size: 50px; color: lightgrey">event_note</i>
+                        </div>
+                        <div class="item-inner" data-page="page-name-event-content">
+
+                        </div>
+                        <script id="my-name-event-content" type="text/template7">
+                            {{#js_if "this.avg < 0.5"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 4.9"}}
+                            <div class="item-title-row">
+                                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                <div class="item-after"></div>
+                            </div>
+                            <div class="item-subtitle">
+                            </div>
+                            <div class="item-text">
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                    {{count_rate}} người đánh giá
+                                </span>
+                            </div>
+                            {{/js_if}
+                        </script>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="list" style="margin-top: -40px;">
+            <ul>
+                <li>
+                    <span class="item-content">
+                        <div class="item-inner" data-page="page-name-event-rate">
+
+                        </div>
+                        <script id="my-name-event-rate" type="text/template7">
+                            {{#js_if "this.avg < 0.5"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                            {{#js_if "this.avg > 4.9"}}
+                            <div class="item-title" style="white-space: inherit; width: 100%;">
+                                    <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                                    <div class="item-footer">
+                                        <div style="font-size: 30px; text-align: center;">{{avg}}</div>
+                                        <div style="text-align: center; color: gold;">
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                                        </div>
+                                        <p style="text-align: center; font-size: 14px;">
+                                            Tổng số người đánh giá: {{count_rate}}
+                                        </p>
+                                        <div>
+                                            <span>
+                                                <span style="color: #2196f3;">
+                                                    ★★★★★
+                                                </span>
+                                                <span style="color: #2196f3; float: right;">
+                                                        {{count_rate_5}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_5}}" class="progressbar" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_5"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: red;">
+                                                    ★★★★
+                                                </span>
+                                                <span style="color: red; float: right;">
+                                                        {{count_rate_4}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_4}}" class="progressbar color-red" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_4"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: orange;">
+                                                    ★★★
+                                                </span>
+                                                <span style="color: orange; float: right;">
+                                                        {{count_rate_3}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_3}}" class="progressbar color-orange" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_3"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #4caf50;">
+                                                    ★★
+                                                </span>
+                                                <span style="color: #4caf50; float: right;">
+                                                        {{count_rate_2}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_2}}" class="progressbar color-green" id="demo-inline-progressbar" style="height: 7px;">
+                                                    <span style="transform: translate3d(-{{js "100 - this.percent_rate_2"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <span style="color: #e91e63;">
+                                                    ★
+                                                </span>
+                                                <span style="color: #e91e63; float: right;">
+                                                        {{count_rate_1}}
+                                                </span>
+                                            </span>
+                                            <span data-progress="{{percent_rate_1}}" class="progressbar color-pink" id="demo-inline-progressbar" style="height: 7px;">
+                                                <span style="transform: translate3d(-{{js "100 - this.percent_rate_1"}}%, 0px, 0px);"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/js_if}
+                        </script>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list" style="margin-top: -20px;">
+            <ul>
+                <li>
+                    <span class="item-content">
+                        <div class="item-inner" data-page="page-name-event-introduce">
+
+                        </div>
+                        <script id="my-name-event-introduce" type="text/template7">
+                            <div class="item-title" style="white-space: inherit;">
+                                    <div class="item-header" style="font-size: 15px;">Giới thiệu</div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Thời gian bắt đầu: {{start}}
+                                    </div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        Thời gian kết thúc: {{end}}
+                                    </div>
+                                </div>
+                                <div class="item-after"></div>
+                        </script>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="item-content">
+                        <div class="item-inner" data-page="page-name-event-description">
+
+                        </div>
+                        <script id="my-name-event-description" type="text/template7">
+                            <div class="item-title" style="white-space: inherit;">
+                                    <div class="item-header" style="font-size: 15px;">Nội dung</div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        {{content}}
+                                    </div>
+                                </div>
+                                <div class="item-after"></div>
+                        </script>
+                    </span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title" style="white-space: inherit; margin-bottom: -40px;">
+                                <div class="item-header" style="font-size: 15px;">Ảnh đẹp</div>
+                                <div class="item-footer" style="font-size: 14px;">
+                                    <div class="block" style="margin: 0 0; padding: 0 0;">
+                                        <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-wrapper" data-page="page-name-event-slide">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-after"></div>
+                        </div>
+                        <script id="my-name-event-slide" type="text/template7">
+                            <div class="swiper-slide" style="border: none;">
+                                    <img src="{{image_slide}}" width="100%" />
+                            </div>
+                        </script>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list media-list">
+            <ul class="list-form-rate" data-page="page-name-event-form-rate">
+
+            </ul>
+            <ul id="list-content-event-rate">
+
+            </ul>
+        </div>
+        <script id="my-name-event-form-rate" type="text/template7">
+            {{#js_if "this.star === 1"}}
+            <li>
+                <a class="item-content">
+                    <div class="item-media">
+                        <img src="{{image}}" width="50" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title" style="font-size: 14px;">{{username}}</div>
+                            <div class="item-after" style="font-size: 12px;">{{created}}</div>
+                        </div>
+                        <div class="item-subtitle">
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                        </div>
+                        <div class="item-subtitle" style="font-size: 12px; color: #757575;">
+                                {{name}}
+                        </div>
+                        <div class="item-text" style="font-size: 11px;">{{description}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/js_if}
+            {{#js_if "this.star === 2"}}
+            <li>
+                <a class="item-content">
+                    <div class="item-media">
+                        <img src="{{image}}" width="50" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title" style="font-size: 14px;">{{username}}</div>
+                            <div class="item-after" style="font-size: 12px;">{{created}}</div>
+                        </div>
+                        <div class="item-subtitle">
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                        </div>
+                        <div class="item-subtitle" style="font-size: 12px; color: #757575;">
+                                {{name}}
+                        </div>
+                        <div class="item-text" style="font-size: 11px;">{{description}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/js_if}
+            {{#js_if "this.star === 3"}}
+            <li>
+                <a class="item-content">
+                    <div class="item-media">
+                        <img src="{{image}}" width="50" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title" style="font-size: 14px;">{{username}}</div>
+                            <div class="item-after" style="font-size: 12px;">{{created}}</div>
+                        </div>
+                        <div class="item-subtitle">
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                        </div>
+                        <div class="item-subtitle" style="font-size: 12px; color: #757575;">
+                                {{name}}
+                        </div>
+                        <div class="item-text" style="font-size: 11px;">{{description}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/js_if}
+            {{#js_if "this.star === 4"}}
+            <li>
+                <a class="item-content">
+                    <div class="item-media">
+                        <img src="{{image}}" width="50" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title" style="font-size: 14px;">{{username}}</div>
+                            <div class="item-after" style="font-size: 12px;">{{created}}</div>
+                        </div>
+                        <div class="item-subtitle">
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star_border</i>
+                        </div>
+                        <div class="item-subtitle" style="font-size: 12px; color: #757575;">
+                                {{name}}
+                        </div>
+                        <div class="item-text" style="font-size: 11px;">{{description}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/js_if}
+            {{#js_if "this.star === 5"}}
+            <li>
+                <a class="item-content">
+                    <div class="item-media">
+                        <img src="{{image}}" width="50" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title" style="font-size: 14px;">{{username}}</div>
+                            <div class="item-after" style="font-size: 12px;">{{created}}</div>
+                        </div>
+                        <div class="item-subtitle">
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                                <i class="material-icons" style="width: 11px; color: gold; font-size: 17px;">star</i>
+                        </div>
+                        <div class="item-subtitle" style="font-size: 12px; color: #757575;">
+                                {{name}}
+                        </div>
+                        <div class="item-text" style="font-size: 11px;">{{description}}</div>
+                    </div>
+                </a>
+            </li>
+            {{/js_if}
+        </script>
+        <div class="preloader infinite-scroll-preloader"></div>
+    </div>
+</div>

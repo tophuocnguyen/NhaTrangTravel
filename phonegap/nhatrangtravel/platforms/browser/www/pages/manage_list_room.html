@@ -1,0 +1,35 @@
+<div class="page" data-name="list-room">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title" style="text-align: center; width: 100%;">Danh sách phòng</div>
+            
+        </div>
+    </div>
+
+    <div class="page-content">
+
+        <span class="typeroom-content" data-page="page-typeroom-content">
+
+        </span>
+        <script id="my-typeroom-content" type="text/template7">
+            <a href="/manage_room/?hotel_id={{hotel_id}}&room_id={{id_room_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_room_feature}})" class="card-header align-items-flex-end">{{name_room_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_room_feature}}</p>
+                    <p style="font-weight: bold;">Giá: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_room_feature}}</p>
+                </div>
+            </div>
+            </a>
+        </script>
+        <div class="preloader infinite-scroll-preloader"></div>
+    </div>
+
+</div>

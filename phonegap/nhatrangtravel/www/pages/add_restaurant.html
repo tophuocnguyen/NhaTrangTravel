@@ -1,0 +1,159 @@
+<div class="page" data-name="add-restaurant">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="ios-only">Back</span>
+            </a>
+          </div>
+          <div class="title">Create restaurant</div>
+          <div class="right" style="padding-right: 3%">
+                <a class="add-restaurant">Add</a>
+            </div>
+      </div>
+    </div>
+    <div class="page-content">
+    <form class="list" id="my-form">
+        <div class="block-title" style="color: #000;">Restaurant information</div>
+        <div class="list accordion-list">
+          <ul>
+            <li>
+                <div class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                            <input type="text" name="name" placeholder="Restaurant name">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                    <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                      <select name="type">
+                        <option value="1" selected>Nhà Hàng</option>
+                        <option value="2">Quán cơm bình dân</option>
+                        <option value="3">Trà sữa</option>
+                        <option value="4">Ăn vặt</option>
+                      </select>
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">Standard</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                 <li>
+             
+            <li>
+                <div class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                                <input id="appt-time" type="time" name="open" value="13:30">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="height: 44px;">
+                 <div class="item-content item-input">
+                     <div class="item-inner">
+                         <div class="item-input-wrap">
+                                <input id="appt-time1" type="time" name="close" value="21:30">
+                        </div>
+                    </div>
+                </div>
+             </li>
+          </ul>
+        </div>
+
+        <div class="block-title">Location</div>
+        <div class="list accordion-list">
+          <ul>
+            <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                    <input id="autocomplete-dropdown-ajax-typeahead" type="text" placeholder="Regions" name="tp">
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input item-input-with-info" style="height: 29px;">
+                <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="text" name="address" placeholder="Address" required validate>
+                        <span class="input-clear-button"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="item-content item-input item-input-with-info">
+                <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="text" name="branch" placeholder="Branch" required validate>
+                        <span class="input-clear-button"></span>
+                    </div>
+                </div>
+            </li>
+              <li class="item-content item-input" style="height: 250px;">
+
+                                    <input id="latitude" style="position: absolute;
+                                    z-index: 5;
+                                    text-align: left;
+                                    font-family: 'Roboto','sans-serif';
+                                    line-height: 30px;
+                                    left: 6%;
+                                    top:7%;
+                                    border-style: groove;
+                                    background: white;
+                                    width: 124px;" type="text" placeholder="Latitude" required readonly="true" name="lat">
+                                    <input id="longitude" style="position: absolute;
+                                    z-index: 5;
+                                    text-align: left;
+                                    left: 6%;
+                                    top: 24%;
+                                    background: white;
+                                    border-style: groove;
+                                    font-family: 'Roboto','sans-serif';
+                                    line-height: 30px;
+                                    width: 124px;" type="text" placeholder="Longitude" required readonly="true" name="lng">
+
+                <div  id="googleMap" style=" position: absolute; height: 94%; width: 92%; overflow: hidden;" class="clickhere"></div>
+                
+              </li>
+              
+          </ul>
+        </div>
+        
+        <!-- Custom Accordion -->
+
+        <div class="list list accordion-list" style="margin-top: -9%">
+                <ul>
+                  <li class="item-content item-input">
+                          <div class="item-inner">
+                            <div class="item-input-wrap">
+                                  <textarea placeholder="Your descripton" required validate name="descripton" placeholder="descripton"></textarea>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="item-content item-input item-input-with-info" style="height: 40px;">
+                          <div class="item-inner">
+                                <div class="item-input-wrap">
+                                  <input type="text" name="web" placeholder="Website" required validate>
+                                  <span class="input-clear-button"></span>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="item-content item-input">
+                            <div class="item-inner">
+                              <div class="item-input-wrap">
+                              <input id="inputFileToLoad" type="file" />
+                              <div id="imgTest" name="IMG">
+                                <img src="" id="image1" style="width: 44%;">
+                              </div>
+                              </div>
+                            </div>
+                        </li>
+                </ul>
+              </div>
+              <!-- <div class="col"><a class="button button-fill button-round add-restaurant" href="#">ADD</a></div> -->
+    </form>
+
+    </div>
+  </div>

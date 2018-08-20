@@ -1,0 +1,77 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title">Tin nhắn</div>
+        </div>
+    </div>
+    <div class="toolbar tabbar tabbar-scrollable">
+        <div class="toolbar-inner">
+            <a href="#tab-1-messages" class="tab-link tab-link-active">Tin nhắn</a>
+            <a href="#tab-2-messages" class="tab-link">Bạn bè</a>
+        </div>
+    </div>
+    <div class="tabs">
+        <div id="tab-1-messages" class="page-content tab tab-active" data-page="page-review-feature">
+
+            <!-- search target list -->
+            <div class="list searchbar-found media-list">
+                <div data-page="list-user-messages" class="user-messages">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <script id="my-user-messages" type="text/template7">
+                  <li>
+                    <a href="/messages_chat/?user_id={{user_id}}" class="item-link item-content">
+                      <div class="item-media">
+                        <img src="{{image_user_messages}}" style="width: 60px; height: 60px;"  class="message-avatar" />
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">{{name_user_messages}}</div>
+                          <div class="item-after"></div>
+                        </div>
+                        <div class="item-subtitle"></div>
+                        <div class="item-text">
+                          {{description_user_messages}}
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+              </script>
+            </div>
+        </div>
+        <div id="tab-2-messages" class="page-content tab">
+      
+            <div class="card demo-facebook-card">
+              <div class="card-header">
+                <div class="demo-facebook-avatar">
+                  <img src="./img/1.jpg" width="34" height="34" />
+                </div>
+                <div class="demo-facebook-name">Hai NGuyen</div>
+                <div class="demo-facebook-date">Monday at 2:15 PM</div>
+              </div>
+              <div class="card-content card-content-padding">
+                <p>3 ngày đi Đà Lạt từ Nha Trang</p>
+                <img src="./img/8.jpg" width="100%" />
+                <p class="likes">Likes: 112 Comments: 43</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="link">Like</a>
+                <a href="#" class="link">Comment</a>
+                <a href="#" class="link">Share</a>
+              </div>
+            </div>
+      
+          </div>
+
+    </div>
+
+
+</div>

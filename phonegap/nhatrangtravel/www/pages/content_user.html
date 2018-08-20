@@ -1,0 +1,157 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner" data-page="page-content-user-title">
+
+        </div>
+        <script id="my-content-user-title" type="text/template7">
+            {{#js_if "this.user_id_save === this.user_id"}}
+                <div class="left">
+                    <a class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">Back</span>
+                    </a>
+                </div>
+                <div class="title" style="text-align:center; width:100%;">{{name_user_title}}</div>
+                <div class="right">
+                    <a href="/settings/" class="link">
+                        <i class="material-icons">settings</i>
+                    </a>
+                </div>
+            {{else}}
+            <div class="left">
+                <a class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title" style="text-align:center; width:100%;">{{name_user_title}}</div>
+            {{/js_if}}
+            </script>
+    </div>
+
+    <div class="page-content">
+        <div class="card demo-card-header-pic" style="margin: unset; -webkit-box-shadow: unset;" >
+            <span class="user-header" data-page="page-user-header">
+
+            </span>
+            <div class="card-footer card-status">
+                <a href="#" class="link"></a>
+                <a href="/messages_chat/" class="link" style="color: #8e8e93;">
+                    <i class="material-icons">chat_bubble_outline</i>
+                </a>
+                <a href="#" class="link link-follow">
+                    
+                </a>
+                
+            </div>
+        </div>
+        <script id="my-user-header" type="text/template7">
+            {{#if image_cover_user}}
+                <div style="background-image:url({{image_cover_user}}); height: 60vw;" class="card-header align-items-flex-end">
+                    <img src="{{image_avatar_user}}" style="width: 70px; height: 70px;" class="message-avatar" />
+                    <span style="width: 100%; font-size: 21px;">{{name_user}}</span>
+                </div>
+                
+            {{else}}
+                <div style="background-image:url(./img/nhatrang5.jpg); height: 60vw;" class="card-header align-items-flex-end">
+                    <img src="{{image_avatar_user}}" style="width: 70px; height: 70px;" class="message-avatar" />
+                    <span style="width: 100%; font-size: 21px;">{{name_user}}</span>
+                </div>
+            {{/if}}
+        </script>
+        <script id="my-follow" type="text/template7">
+            {{#if status_user}}
+            <i class="material-icons" style="color: blue;">rss_feed</i>
+            {{else}}
+            <i class="material-icons" style="color: #8e8e93;">rss_feed</i>
+            {{/if}}
+        </script>
+
+        <div class="block" style="padding: 0px 7px; margin: unset;">
+            <div class="row no-gap">
+                <span class="col count-followings">
+
+                </span>
+                <span class="col count-followers">
+
+                </span>
+                <span class="col count-reviews">
+
+                </span>
+            </div>
+            <div class="row no-gap">
+                <span class="col count-save">
+
+                </span>
+                <span class="col count-adds">
+
+                </span>
+                <span class="col count-plans">
+
+                </span>
+            </div>
+        </div>
+        <script id="count-followings" type="text/template7">
+            <a href="/list_followings/?user_id={{user_id}}" class="button" style="border: 1px solid; text-align: center; height: 33.33333333%; line-height: unset; text-transform: unset; color: #8e8e93;">
+                <div>{{count_following}}</div>
+                <div>Theo dõi</div>
+            </a>
+        </script>
+        <script id="count-followers" type="text/template7">
+            <a href="/list_followers/?user_id={{user_id}}" class="button" style="border: 1px solid; text-align: center; height: 33.33333333%; line-height: unset; text-transform: unset; color: #8e8e93;">
+                <div>{{count_follower}}</div>
+                <div>Người theo dõi</div>
+            </a>
+        </script>
+        <script id="count-reviews" type="text/template7">
+            <a href="#" class="button" style="border: 1px solid; text-align: center; height: 33.33333333%; line-height: unset; text-transform: unset; color: #8e8e93;">
+                <div>{{count_review}}</div>
+                <div>Đánh giá</div>
+            </a>
+        </script>
+        <script id="count-save" type="text/template7">
+            <a href="#" class="button" style="border: 1px solid; text-align: center; height: 33.33333333%; line-height: unset; text-transform: unset; color: #8e8e93;">
+                <div>{{count_save}}</div>
+                <div>Đã lưu</div>
+            </a>
+        </script>
+        <script id="count-adds" type="text/template7">
+            <a href="/list_adds/?user_id={{user_id}}" class="button" style="border: 1px solid; text-align: center; height: 33.33333333%; line-height: unset; text-transform: unset; color: #8e8e93;">
+                <div>{{count_add}}</div>
+                <div>Đã thêm</div>
+            </a>
+        </script>
+        <script id="count-plans" type="text/template7">
+            <a href="/list_plans/?user_id={{user_id}}" class="button" style="border: 1px solid; text-align: center; height: 33.33333333%; line-height: unset; text-transform: unset; color: #8e8e93;">
+                <div>{{count_plan}}</div>
+                <div>Chuyến đi</div>
+            </a>
+        </script>
+
+
+        <span class="profile-user" data-page="page-profile-user">
+
+        </span>
+
+        <script id="my-profile-user" type="text/template7">
+            <div class="card demo-facebook-card">
+              <div class="card-header">
+                <div class="demo-facebook-avatar">
+                  <img src="{{avatar_user_review_user}}" width="36" height="36" class="message-avatar" />
+                </div>
+                <div class="demo-facebook-name">{{user_name_review_user}}</div>
+                <div class="demo-facebook-date">{{created_review_user}}</div>
+              </div>
+              <a href="/content_review/?review_id={{id_review_user}}" style="color: #212121">
+              <div class="card-content card-content-padding">
+                <p>{{name_review_user}}</p>
+                <img src="{{image_review_user}}" width="100%" />
+                <p class="likes">Likes: 112 Comments: 43</p>
+              </div>
+            </a>
+            </div>
+            
+        </script>
+
+    </div>
+</div>

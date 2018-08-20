@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1, 
+         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>Framework7</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+</head>
+
+<body>
+  <div data-page="list-view" class="page">
+    <div class="list-block">
+      <ul>
+      </ul>
+    </div>
+    <script id="my-template" type="text/template7">
+            <li>
+              <div class="item-content">
+                <div class="item-inner"> 
+                  <div class="item-title">{{title}}</div>
+                  <div class="item-after">{{value}}</div>
+                </div>
+              </div>
+            </li>
+        </script>
+  </div>
+
+  <script src="lib/framework7/js/framework7.min.v1.js"></script>
+  <script src="./js/template7.min.js"></script>
+  <script type="text/javascript" src="./js/my-app.js">
+  </script>
+</body>
+
+</html>

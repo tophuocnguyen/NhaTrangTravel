@@ -1,0 +1,168 @@
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left">
+        <a class="link back" data-ignore-cache="false"  data-reload-previous="false">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Chọn khu vực</div>
+      <div class="subnavbar">
+        <!-- Searchbar with auto init -->
+        <form class="searchbar searchbar-region">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="Tìm kiếm khu vực">
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button">Cancel</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <!-- Searchbar backdrop -->
+    <div class="searchbar-backdrop"></div>
+    <!-- hide-on-search element -->
+    <div class="block searchbar-hide-on-search">
+      <p>Vui lòng chọn tên khu vực cần tìm kiếm</p>
+    </div>
+    <!-- search target list -->
+    <div class="list searchbar-found media-list">
+      <div data-page="list-view-regions" class="regions">
+        <ul>
+
+        </ul>
+      </div>
+      <script id="my-list-regions" type="text/template7">
+        {{#js_if "this.slug === 'region'"}}
+        <li>
+          <a href="/content_region/?region_id={{id}}" class="item-link item-content">
+            <div class="item-media">
+              <img src="{{image}}" style="width: 100px" />
+            </div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{name}}</div>
+                <div class="item-after"></div>
+              </div>
+              <div class="item-subtitle"></div>
+              <div class="item-text">
+                {{description}}
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/js_if}
+
+        {{#js_if "this.slug === 'hotel'"}}
+        <li>
+          <a href="/search_hotels/?region_id={{id}}" class="item-link item-content">
+            <div class="item-media">
+              <img src="{{image}}" style="width: 100px" />
+            </div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{name}}</div>
+                <div class="item-after"></div>
+              </div>
+              <div class="item-subtitle"></div>
+              <div class="item-text">
+                {{description}}
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/js_if}
+
+        {{#js_if "this.slug === 'place'"}}
+        <li>
+          <a href="/search_places/?region_id={{id}}" class="item-link item-content">
+            <div class="item-media">
+              <img src="{{image}}" style="width: 100px" />
+            </div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{name}}</div>
+                <div class="item-after"></div>
+              </div>
+              <div class="item-subtitle"></div>
+              <div class="item-text">
+                {{description}}
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/js_if}
+
+        {{#js_if "this.slug === 'restaurant'"}}
+        <li>
+          <a href="/search_restaurants/?region_id={{id}}" class="item-link item-content">
+            <div class="item-media">
+              <img src="{{image}}" style="width: 100px" />
+            </div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{name}}</div>
+                <div class="item-after"></div>
+              </div>
+              <div class="item-subtitle"></div>
+              <div class="item-text">
+                {{description}}
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/js_if}
+
+        {{#js_if "this.slug === 'tour'"}}
+        <li>
+          <a href="/search_tours/?region_id={{id}}" class="item-link item-content">
+            <div class="item-media">
+              <img src="{{image}}" style="width: 100px" />
+            </div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{name}}</div>
+                <div class="item-after"></div>
+              </div>
+              <div class="item-subtitle"></div>
+              <div class="item-text">
+                {{description}}
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/js_if}
+
+        {{#js_if "this.slug === 'vehicle'"}}
+        <li>
+          <a href="/search_vehicles/?region_id={{id}}" class="item-link item-content">
+            <div class="item-media">
+              <img src="{{image}}" style="width: 100px" />
+            </div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{name}}</div>
+                <div class="item-after"></div>
+              </div>
+              <div class="item-subtitle"></div>
+              <div class="item-text">
+                {{description}}
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/js_if}
+    </script>
+    </div>
+    <!-- Nothing found message -->
+    <div class="block searchbar-not-found">
+      <div class="block-inner">Không tìm thấy kết quả</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="page" data-name="edit_day">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left edit-day-plan-id" data-page="page-edit-day-plan-id">
+
+          </div>
+          
+          <script id="my-edit-day-plan-id" type="text/template7">
+            <a href="/list_plan/?plan_id={{day_plan_id_edit}}">
+                <i class="icon icon-back"></i>
+                <span class="ios-only">Back</span>
+              </a>
+          </script>
+          <div class="title">Back</div>
+      </div>
+    </div>
+    <div class="page-content">
+    <form class="list" id="my-form">
+        <div class="block-title" style="color: #000;">day information</div>
+        <div class="list accordion-list">
+          <ul>
+            <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                        <input id="autocomplete-dropdown-ajax-typeahead" type="text" placeholder="Name place" name="name">
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-input-wrap">
+                                        <!-- <input id="appt-time" type="time" name="timevisit" value=""> -->
+                                        <input type="text" id="appt-time" name="timevisit" value="01:00"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="height: 44px;">
+                         <div class="item-content item-input">
+                             <div class="item-inner">
+                                 <div class="item-input-wrap">
+                                        <!-- <input id="appt-time1" type="time" name="timemove" value=""> -->
+                                        <input type="text" id="appt-time1" name="timemove" value="01:00"/>
+                                </div>
+                            </div>
+                        </div>
+                     </li>
+                        <li class="item-content item-input item-input-with-info">
+                                <div class="item-inner">
+                                  <div class="item-input-wrap">
+                                    <input type="date" placeholder="Date" required validate name="date">
+                                    <!-- <input type="text" placeholder="Your birth date" readonly="readonly" id="demo-calendar-default" name="birthday"/> -->
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="item-content item-input">
+                                    <div class="item-inner">
+                                      <div class="item-input-wrap">
+                                            <textarea placeholder="Note" required validate name="note" placeholder="descripton"></textarea>
+                                            <span class="input-clear-button"></span>
+                                      </div>
+                                    </div>
+                                </li>
+          </ul>
+        </div>
+    </form>
+    <div class="block block-strong row">
+        <div class="col"><a class="button edit-day" href="#">Edit</a></div>
+        <div class="col"><a class="button delete-day" href="#">Delete</a></div>
+      </div>
+    </div>
+  </div>

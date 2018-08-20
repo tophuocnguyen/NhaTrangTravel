@@ -1,0 +1,200 @@
+<div class="page" data-name="manage-edit-hotel">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title" style="text-align: center; width: 100%;">Sửa chỗ ở</div>
+  
+      </div>
+    </div>
+    <div class="page-content">
+      <form class="list" id="my-form-edit-hotel">
+        <div class="list accordion-list">
+          <ul>
+              <li>
+                  <a class="item-link smart-select smart-select-init regionsedithotel" data-open-in="sheet">
+                  <select name="regionsedithotel" id="regionsedithotel">
+  
+                  </select>
+                  <div class="item-content">
+                      <div class="item-inner">
+                      <div class="item-title">Khu vực</div>
+                      </div>
+                  </div>
+                  </a>
+              </li>
+              <li>
+                  <a class="item-link smart-select smart-select-init typehotel" data-open-in="sheet">
+                  <select name="typehotel" id="typehotel">
+  
+                  </select>
+                  <div class="item-content">
+                      <div class="item-inner">
+                      <div class="item-title">Loại chỗ ở</div>
+                      </div>
+                  </div>
+                  </a>
+              </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Nhập tên khách sạn</div>
+                  <div class="item-input-wrap">
+                          <textarea id="name" name="name" placeholder="Nhập nội dung" required validate ></textarea>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Chọn hình ảnh</div>
+                <div class="item-input-wrap">
+                  <div class="fileUpload button button-fill">
+                    <span>
+                      <i class="material-icons">camera_alt</i>
+                    </span>
+                    <input class="upload" id="inputFileToLoad" type="file" accept="image/*;capture=camera" />
+                  </div>
+  
+                  <div id="imgTest" name="IMG" style="text-align: center;">
+                    <img src="" id="image1" style="width: 44%;">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                  <div class="item-inner">
+                  <div class="item-title item-label">Nhập số sao</div>
+                  <div class="item-input-wrap">
+                      <input id="standard" type="number" name="standard" placeholder="Số người">
+                  </div>
+                  </div>
+              </div>
+              </li>
+              <li>
+              <div class="item-content item-input">
+                  <div class="item-inner">
+                  <div class="item-title item-label">Nhập giá trung bình</div>
+                  <div class="item-input-wrap">
+                      <input id="price" type="number" name="price" placeholder="Giá trung bình">
+                  </div>
+                  </div>
+              </div>
+              </li>
+              <li>
+              <div class="item-content item-input">
+                  <div class="item-inner">
+                  <div class="item-title item-label">Nhập địa chỉ</div>
+                  <div class="item-input-wrap">
+                      <textarea id="address" name="address" placeholder="Nhập địa chỉ" required validate ></textarea>
+                  </div>
+                  </div>
+              </div>
+              </li>
+              <li class="item-content item-input" style="height: 250px;">
+
+                  <input id="latitude" style="position: absolute;
+                                                      z-index: 5;
+                                                      text-align: left;
+                                                      font-family: 'Roboto','sans-serif';
+                                                      line-height: 30px;
+                                                      left: 6%;
+                                                      top:7%;
+                                                      border-style: groove;
+                                                      background: white;
+                                                      width: 124px;" type="text" placeholder="latitude" required readonly="true"
+                    name="latitude">
+                  <input id="longitude" style="position: absolute;
+                                                      z-index: 5;
+                                                      text-align: left;
+                                                      left: 6%;
+                                                      top: 24%;
+                                                      background: white;
+                                                      border-style: groove;
+                                                      font-family: 'Roboto','sans-serif';
+                                                      line-height: 30px;
+                                                      width: 124px;" type="text" placeholder="longitude" required readonly="true"
+                    name="longitude">
+      
+                  <div id="googleMap4" style=" position: absolute; height: 94%; width: 92%; overflow: hidden;" class="clickhere"></div>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                      <div class="item-title item-label">Nhập giới thiệu</div>
+                      <div class="item-input-wrap">
+                          <textarea id="descripton" name="descripton" placeholder="Nhập giới thiệu" required validate ></textarea>
+                      </div>
+                      </div>
+                  </div>
+                  </li>
+              <li>
+                  <div class="item-content item-input">
+                      <div class="item-inner">
+                          <div class="item-title item-label">Nhập giờ mở cửa</div>
+                          <div class="item-input-wrap">
+                                  <input id="open" type="time" name="open" value="07:30">
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                   <div class="item-content item-input">
+                       <div class="item-inner">
+                          <div class="item-title item-label">Nhập giờ đóng cửa</div>
+                           <div class="item-input-wrap">
+                                  <input id="close" type="time" name="close" value="23:30">
+                          </div>
+                      </div>
+                  </div>
+               </li>
+              <li>
+              <div class="item-content item-input">
+                  <div class="item-inner">
+                  <div class="item-title item-label">Nhập website chỗ ở</div>
+                  <div class="item-input-wrap">
+                      <textarea id="web" name="web" placeholder="Website" required validate ></textarea>
+                  </div>
+                  </div>
+              </div>
+              </li>
+              
+              <li>
+                  <a class="item-link smart-select smart-select-init status" data-open-in="sheet">
+                      <select name="status" id="status">
+                          <option value="1" selected>Không</option>
+                          <option value="0">Có</option>
+                      </select>
+                      <div class="item-content">
+                          <div class="item-inner">
+                              <div class="item-title">Riêng tư</div>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+          </ul>
+        </div>
+  
+        <!-- <div class="col"><a class="button button-fill button-round add-image" href="#">ADD</a></div> -->
+      </form>
+      <div class="block block-strong row">
+        <div class="col">
+          <a class="button manage-edit-hotel" href="#">Tải lên</a>
+        </div>
+      </div>
+      <script id="my-regionsedithotel" type="text/template7">
+        <option value="{{regions_id}}">{{regions_name}}</option>
+    </script>
+      <script id="my-typehotel" type="text/template7">
+          <option value="{{typehotel_id}}">{{typehotel_name}}</option>
+      </script>
+      
+  
+    </div>
+  </div>
+  

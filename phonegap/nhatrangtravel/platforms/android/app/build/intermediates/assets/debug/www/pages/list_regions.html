@@ -1,0 +1,33 @@
+<div class="page" data-name="list-region">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title" style="text-align: center; width: 100%;">Danh sách khu vực</div>
+            
+        </div>
+    </div>
+
+    <div class="page-content">
+        <span class="typeregion-content" data-page="page-typeregion-content">
+
+        </span>
+        <script id="my-typeregion-content" type="text/template7">
+            <a href="/content_region/?region_id={{id_region_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_region_feature}})" class="card-header align-items-flex-end">{{name_region_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_region_feature}}</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_region_feature}}</p>
+                </div>
+            </div>
+            </a>
+        </script>
+        <div class="preloader infinite-scroll-preloader"></div>
+    </div>
+
+</div>

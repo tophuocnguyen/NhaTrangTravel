@@ -1,0 +1,199 @@
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner" >
+      <div class="left">
+              <a class="link back">
+                  <i class="icon icon-back"></i>
+                  <span class="ios-only">Back</span>
+              </a>
+          </div>
+          <div class="title" data-page="page-content-review-title">
+
+          </div>
+          <script id="my-content-review-title" type="text/template7">
+              {{name_title}}
+                
+            </script>
+            <div class="right" style="padding-right: 3%" data-page="page-content-review-id">
+          
+          </div>
+          <script id="my-content-review-id" type="text/template7"> 
+              <a href="/edit_review/?id_review={{id_review}}">
+                  Sửa
+                </a>
+           </script>
+</div>
+  </div>
+  <div class="fab fab-right-bottom" style="margin-bottom: 100px;">
+    <a href="#" class="save-review" style="background: #00CCCC; width: 45px; height: 45px;">
+
+    </a>
+  </div>
+  <script id="save-review" type="text/template7">
+    {{#if status_review}}
+    <i class="material-icons">favorite</i>
+    {{else}}
+    <i class="material-icons">favorite_border</i>
+    {{/if}}
+  </script>
+  <div class="toolbar messagebar toolbar-comment">
+    <div class="toolbar-inner">
+      <div class="messagebar-area">
+        <textarea class="resizable" name="comment-review" placeholder="Nhập bình luận"></textarea>
+      </div>
+      <a class="link send-link-comment" href="#">Gửi</a>
+    </div>
+    <div class="toolbar-inner">
+      <div class="messagebar-area">
+        <textarea class="resizable" name="comment-review" placeholder="Nhập bình luận"></textarea>
+      </div>
+      <a class="#" href="#">Gửi</a>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <span class="item-image" data-page="page-content-review-image">
+
+    </span>
+    <script id="my-content-review-image" type="text/template7">
+      <img src="{{image}}" style="width: 100%" />
+    </script>
+
+    <div class="list media-list">
+      <ul>
+        <li>
+          <span class="item-content" style="margin-top: -40px;">
+            <div class="item-media">
+              <i class="material-icons" style="font-size: 30px; color: lightgrey">edit</i>
+            </div>
+            <div class="item-inner" data-page="page-content-review-name">
+
+            </div>
+            <script id="my-content-review-name" type="text/template7">
+              <div class="item-title-row">
+                <div class="item-title" style="white-space: initial;">{{name}}</div>
+                <div class="item-after"></div>
+              </div>
+              <div class="item-subtitle">
+              </div>
+            </script>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="list" style="margin-top: -20px;">
+      <ul>
+        <li>
+          <span class="item-content">
+            <div class="item-inner" data-page="page-content-review-introduce">
+
+            </div>
+            <script id="my-content-review-introduce" type="text/template7">
+              <div class="item-title" style="white-space: inherit;">
+                <div class="item-header" style="font-size: 15px;">Giới thiệu</div>
+                <div class="item-footer" style="font-size: 14px;">
+                  <span style="font-weight: bold;">Thời gian mở cửa: </span> {{open}}
+                </div>
+                <div class="item-footer" style="font-size: 14px;">
+                  <span style="font-weight: bold;">Thời gian đóng cửa: </span> {{close}}
+                </div>
+                <div class="item-footer" style="font-size: 14px;">
+                  <span style="font-weight: bold;">Địa chỉ: </span> {{address}}
+                </div>
+              </div>
+              <div class="item-after"></div>
+            </script>
+          </span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <span class="item-content">
+            <div class="item-inner" data-page="page-content-review-description">
+
+            </div>
+            <script id="my-content-review-description" type="text/template7">
+              <div class="item-title" style="white-space: inherit;">
+                <div class="item-header" style="font-size: 15px;">Nội dung</div>
+                <div class="item-footer" style="font-size: 14px;">
+                  {{description}}
+                </div>
+              </div>
+              <div class="item-after"></div>
+            </script>
+          </span>
+        </li>
+      </ul>
+      <ul class="list-image" data-page="page-content-review-list-image">
+
+      </ul>
+      <script id="my-content-review-list-image" type="text/template7">
+        <li>
+          <span class="item-content">
+            <div class="item-inner">
+              <div class="item-title" style="white-space: inherit;">
+                <div class="item-header" style="font-size: 15px;"></div>
+                <div class="item-footer" style="font-size: 14px;">
+                  {{name_image}}
+                </div>
+                <div class="item-footer" style="font-size: 14px;">
+                  <img src="{{list_image}}" style="width: 100%" />
+                </div>
+              </div>
+              <div class="item-after"></div>
+            </div>
+
+          </span>
+        </li>
+      </script>
+      <ul>
+        <li>
+          <span class="item-content">
+            <div class="item-inner" data-page="page-content-review-rate">
+
+            </div>
+            <script id="my-content-review-rate" type="text/template7">
+              <div class="item-title" style="white-space: inherit;">
+                <div class="item-header" style="font-size: 15px;">Đánh giá</div>
+                <div class="item-footer" style="font-size: 14px;">
+                  {{rate}}
+                </div>
+              </div>
+              <div class="item-after"></div>
+            </script>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="list media-list">
+      <ul class="list-form-rate" data-page="page-content-review-comment">
+
+      </ul>
+      <ul id="list-content-review-comment">
+
+      </ul>
+    </div>
+    <div class="preloader infinite-scroll-preloader"></div>
+
+    <script id="my-content-review-comment" type="text/template7">
+      <li>
+        <a class="item-content">
+          <div class="item-media">
+            <img src="{{image_user}}" width="50" class="message-avatar" />
+          </div>
+          <div class="item-inner">
+            <div class="item-title-row">
+              <div class="item-title" style="font-size: 14px;">{{username}}</div>
+              <div class="item-after" style="font-size: 12px;">{{created}}</div>
+            </div>
+            <div class="item-text" style="font-size: 11px;">{{content}}</div>
+          </div>
+        </a>
+      </li>
+    </script>
+    <div id="end"></div>
+  </div>
+
+</div>

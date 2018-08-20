@@ -1,0 +1,78 @@
+<div class="page" data-name="create_day">
+        <div class="navbar">
+          <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                  <i class="icon icon-back"></i>
+                  <span class="ios-only">Back</span>
+                </a>
+              </div>
+              <div class="title">Thêm địa điểm</div>
+              <div class="right create-day-plan-id" data-page="page-create-day-plan-id" style="padding-right: 3%">
+                  <!-- <a class="add-day" id="add-day">Add</a> -->
+              </div>
+              <script id="my-create-day-plan-id" type="text/template7">
+                <a href="/list_plan/?day_plan_id_create={{day_plan_id_create}}">
+                    Xem chi tiết
+                  </a>
+              </script>
+          </div>
+        </div>
+        <div class="page-content">
+        <form class="list" id="my-form3">
+            <div class="block-title" style="color: #000;">Thông tin tham quan</div>
+            <div class="list accordion-list">
+              <ul>
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                        <input id="autocomplete-dropdown-ajax-typeahead" type="text" placeholder="Tên địa điểm" name="name">
+                        <span class="input-clear-button"></span>
+                        </div>
+                    </div>
+                </li>
+                    
+                    <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                            <!-- <input id="appt-time" type="time" name="timevisit" value=""> -->
+                                            <input type="text" id="appt-time" name="timevisit" value="01:00"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="height: 44px;">
+                             <div class="item-content item-input">
+                                 <div class="item-inner">
+                                     <div class="item-input-wrap">
+                                            <!-- <input id="appt-time1" type="time" name="timemove" value=""> -->
+                                            <input type="text" id="appt-time1" name="timemove" value="01:00"/>
+                                    </div>
+                                </div>
+                            </div>
+                         </li>
+                            <li class="item-content item-input item-input-with-info">
+                                    <div class="item-inner">
+                                      <div class="item-input-wrap">
+                                        <input type="date" placeholder="Ngày" required validate name="date">
+                                        <!-- <input type="text" placeholder="Your birth date" readonly="readonly" id="demo-calendar-default" name="birthday"/> -->
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="item-content item-input">
+                                        <div class="item-inner">
+                                          <div class="item-input-wrap">
+                                                <textarea placeholder="Note" required validate name="note" placeholder="Ghi chú"></textarea>
+                                                <span class="input-clear-button"></span>
+                                          </div>
+                                        </div>
+                                    </li>
+              </ul>
+              <div class="col">
+                <a class="button button-fill button-round add-day">Tạo</a>
+              </div>
+            </div>
+        </form>
+        </div>
+      </div>

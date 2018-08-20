@@ -1,0 +1,3058 @@
+<div class="page" data-name="favorite">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="title" style="text-align: center; width: 100%;">Yêu thích</div>
+        </div>
+    </div>
+    <!-- Additional "tabbar-scrollable" class -->
+    <div class="toolbar tabbar tabbar-scrollable">
+        <div class="toolbar-inner">
+            <a href="#tab-1-favorite" class="tab-link tab-link-active">Top địa điểm</a>
+            <a href="#tab-2-favorite" class="tab-link">Đã thích</a>
+        </div>
+    </div>
+    <div class="tabs">
+        <div id="tab-1-favorite" class="page-content tab tab-active">
+
+            <div class="list">
+                <ul>
+                    <!-- Open In Sheet -->
+                    <li>
+                        <a class="item-link smart-select smart-select-init typeplace" data-open-in="sheet">
+                            <select name="typeplace" id="typeplace">
+                                <option value="place" selected>Vui chơi</option>
+                                <option value="hotel">Chỗ ở</option>
+                                <option value="restaurant">Ăn uống</option>
+                                <option value="vehicle">Phương tiện</option>
+                                <option value="tour">Tours</option>
+                                <option value="event">Sự kiện</option>
+                            </select>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Chọn loại</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <span class="typeplace-content" data-page="page-typeplace-content">
+
+            </span>
+            <script id="my-typeplace-content" type="text/template7">
+                {{#js_if "this.avg < 0.5"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+                <a>
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+                {{#js_if "this.avg > 4.9"}}
+                <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+                <div class="card demo-card-header-pic">
+                    <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                    <div class="card-content card-content-padding">
+                        <p class="date">{{created_place_feature}}</p>
+                        <p>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                            <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                                {{avg}}
+                            </span>
+                        </p>
+                        <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                        <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                        <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                    </div>
+                </div>
+                </a>
+                {{/js_if}
+      </script>
+      <script id="my-typehotel-content" type="text/template7">
+        {{#js_if "this.avg < 0.5"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+        <a>
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.9"}}
+        <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_hotel_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+    </script>
+
+    <script id="my-typerestaurant-content" type="text/template7">
+        {{#js_if "this.avg < 0.5"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+        <a>
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.9"}}
+        <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_restaurant_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+    </script>
+    <script id="my-typevehicle-content" type="text/template7">
+        {{#js_if "this.avg < 0.5"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+        <a>
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.9"}}
+        <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_vehicle_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+    </script>
+    <script id="my-typetour-content" type="text/template7">
+        {{#js_if "this.avg < 0.5"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+        <a>
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.9"}}
+        <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_tour_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+    </script>
+    <script id="my-typeevent-content" type="text/template7">
+        {{#js_if "this.avg < 0.5"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+        <a>
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+        {{#js_if "this.avg > 4.9"}}
+        <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+        <div class="card demo-card-header-pic">
+            <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+            <div class="card-content card-content-padding">
+                <p class="date">{{created_event_feature}}</p>
+                <p>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                    <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                        {{avg}}
+                    </span>
+                </p>
+                <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+            </div>
+        </div>
+        </a>
+        {{/js_if}
+    </script>
+            <div class="preloader infinite-scroll-preloader"></div>
+
+        </div>
+        <div id="tab-2-favorite" class="page-content tab">
+
+            <div class="list">
+                <ul>
+                    <!-- Open In Sheet -->
+                    <li>
+                        <a class="item-link smart-select smart-select-init typeplace-tab2" data-open-in="sheet">
+                            <select name="typeplace-tab2" id="typeplace-tab2">
+                                <option value="place" selected>Vui chơi</option>
+                                <option value="hotel">Chỗ ở</option>
+                                <option value="restaurant">Ăn uống</option>
+                                <option value="vehicle">Phương tiện</option>
+                                <option value="tour">Tours</option>
+                                <option value="event">Sự kiện</option>
+                            </select>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Chọn loại</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <span class="typeplace-content-tab2" data-page="page-typeplace-content-tab2">
+
+            </span>
+            <script id="my-typeplace-content-tab2" type="text/template7">
+            {{#js_if "this.avg < 0.5"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <a>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <a href="/content_place/?place_id={{id_place_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_place_feature}})" class="card-header align-items-flex-end">{{name_place_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_place_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_place_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+          </script>
+           
+            <script id="my-typehotel-content-tab2" type="text/template7">
+            {{#js_if "this.avg < 0.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <a>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+        </script>
+
+        <script id="my-typerestaurant-content-tab2" type="text/template7">
+            {{#js_if "this.avg < 0.5"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <a>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <a href="/content_restaurant/?restaurant_id={{id_restaurant_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_restaurant_feature}})" class="card-header align-items-flex-end">{{name_restaurant_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_restaurant_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_restaurant_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+        </script>
+        <script id="my-typevehicle-content-tab2" type="text/template7">
+            {{#js_if "this.avg < 0.5"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <a>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <a href="/content_vehicle/?vehicle_id={{id_vehicle_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_vehicle_feature}})" class="card-header align-items-flex-end">{{name_vehicle_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_vehicle_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_vehicle_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+        </script>
+        <script id="my-typetour-content-tab2" type="text/template7">
+            {{#js_if "this.avg < 0.5"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <a>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <a href="/content_tour/?tour_id={{id_tour_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_tour_feature}})" class="card-header align-items-flex-end">{{name_tour_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_tour_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_tour_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+        </script>
+        <script id="my-typeevent-content-tab2" type="text/template7">
+            {{#js_if "this.avg < 0.5"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <a>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <a href="/content_events/?event_id={{id_event_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_event_feature}})" class="card-header align-items-flex-end">{{name_event_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_event_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_event_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+        </script>
+        
+        
+        <div class="preloader infinite-scroll-preloader"></div>
+
+        </div>
+
+    </div>
+</div>

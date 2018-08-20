@@ -1,0 +1,163 @@
+
+<div class="page" data-name="modify-information">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Thay đổi thông tin</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <form class="list" id="my-form" style="margin-top: 6px">
+    <div class="block block-strong" style="margin-top: 2%;margin-bottom: -2%;padding-bottom: 0%">
+      <div class="row">
+        <!-- <button class="button button-small button-round button-fill color-gray" id="perm" style="width: 95px; height: 95px; margin-left: 11%; margin-top: -1%;border-radius: 111%">
+          <i class="material-icons" style="font-size: 59px; padding-right: 42%;">perm_identity</i>
+        </button> -->
+        <div id="imgTest" name="IMG" class="user-image" data-page="page-content-user-image">
+          
+        </div>
+        <script id="my-content-user-image" type="text/template7">
+          <img src="{{image_avatar_user_change}}" id="image1" style="margin: 50px;
+          width: 97px;
+          height: 97px;
+          border: solid 5px #9e9e9e;
+          background: #9e9e9e;
+          border-radius: 50%;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          margin-left: 23%;
+          margin-top: -6%;
+          margin-bottom: 3%">
+        </script>
+        <input id="inputFileToLoad" class="button" type="file" style="width: 12%; margin-left: 12%; margin-top: -1%;margin-right: 10%" name="imageFile" accept="image/*"/>       
+                    <!-- <a class="button button-fill button-round encodeImageFileAsURL" href="#" style="width: 29%;">Add image</a> -->
+      </div>
+    </div>
+
+      <div class="list inline-labels no-hairlines-md" style="margin-bottom: -5%">
+        <ul>
+            <li class="item-content item-input">
+                <div class="item-inner">
+                    <div class="item-title item-label">Ảnh bìa</div>
+                  <div class="item-input-wrap">
+                  <input id="inputFileToLoad1" type="file" />
+                  <div id="imgTest1" name="IMG1">
+                    <img src="" id="image2" style="width: 44%;">
+                  </div>
+                  </div>
+                </div>
+            </li>
+          <li class="item-content item-input item-input-with-info">
+            <!-- <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div> -->
+            <div class="item-inner">
+              <div class="item-title item-label">Họ tên</div>
+              <div class="item-input-wrap">
+                <input type="text" name="name" placeholder="Hãy nhận họ tên của bạn" required validate id="name">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">Tên tài khoản</div>
+              <div class="item-input-wrap">
+                <input type="text" name="username" placeholder="Hãy nhập tên tài khoản" required validate id ="username">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="item-content item-input item-input-with-info"> 
+            <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-label">Password</div>
+              <div class="item-input-wrap">
+                <input type="password" name="password" placeholder="Your password" required validate>
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li> -->
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">Địa chỉ</div>
+              <div class="item-input-wrap">
+                <input type="text" name="address" placeholder="Hãy nhập địa chỉ của bạn" required validate id ="address">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">E-mail</div>
+              <div class="item-input-wrap">
+                <input type="email" name="email" placeholder="Hãy nhập e-mail" required validate id = "email">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">Facebook</div>
+              <div class="item-input-wrap">
+                <input type="url" name="facebook" placeholder="Hãy nhập Facebook" required validate id ="facebook">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">Số điện thoại</div>
+              <div class="item-input-wrap">
+                <input type="tel" name="phone" placeholder="Hãy nhập số điện thoại của bạn" required validate id="phone">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">Giới tính</div>
+              <div class="item-input-wrap">
+                <select placeholder="Hãy chọn giới tính" name="gender" id="gender">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">Ngày sinh</div>
+              <div class="item-input-wrap">
+                <input type="date" placeholder="Please choose..." required validate name="birthday" id="birthday">
+                <!-- <input type="text" placeholder="Your birth date" readonly="readonly" id="demo-calendar-default" name="birthday"/> -->
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input item-input-with-info">
+            <div class="item-inner">
+              <div class="item-title item-label">Descripton</div>
+              <div class="item-input-wrap">
+                <textarea placeholder="Hãy mô tả về bạn"  required validate name="descripton" id="descripton"></textarea>
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+
+      <div class="col"><a class="button button-fill button-round save-acount" href="#">Lưu</a></div>
+      <!-- <div class="col"><a class="button fill-form-from-data " href="#">Fill Form</a></div> -->
+    </form>
+
+    </div>
+  </div>
+

@@ -1,0 +1,244 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title" data-page="page-content-plan-title">
+                
+            </div>
+            <script id="my-content-plan-title" type="text/template7"> 
+                {{name_title}}
+             </script>
+            <div class="right" style="padding-right: 3%" data-page="page-content-plan-id">
+                    
+            </div>
+            <script id="my-content-plan-id" type="text/template7"> 
+                <a href="/edit_plan/?id_plan={{id_plan}}">
+                    Edit
+                  </a>
+             </script>
+        </div>
+        
+    </div>
+    <div class="fab fab-right-bottom" data-page="page-name-plan-login-like">
+        
+        <script id="save-plan" type="text/template7">
+            {{#if status}}
+            <i class="material-icons">favorite_border</i>
+            {{else}}
+            <i class="material-icons">favorite</i>
+            {{/if}}
+        </script>
+
+    </div>
+    <script id="plan-login-like" type="text/template7">
+        <a href="#" class="{{like}}" style="background: #00CCCC; width: 45px; height: 45px;">
+            
+            </a>
+    </script>
+        <div class="toolbar messagebar toolbar-comment">
+                <div class="toolbar-inner">
+                    <div class="messagebar-area">
+                        <textarea class="resizable" name="comment-plan" placeholder="Nhập bình luận"></textarea>
+                    </div>
+                    <a class="link send-link-comment" href="#">Gửi</a>
+                </div>
+                <div class="toolbar-inner">
+                    <div class="messagebar-area">
+                        <textarea class="resizable" name="plan" placeholder="Nhập bình luận"></textarea>
+                    </div>
+                    <a class="#" href="#"></a>
+                </div>
+            </div>
+    <div class="page-content">
+        <span class="item-image" data-page="page-content-plan-image">
+
+        </span>
+        <script id="my-content-plan-image" type="text/template7">
+            <img src="{{image}}" style="width: 100%" />
+        </script>
+
+        <div class="list media-list">
+            <ul>
+                <li>
+                    <span class="item-content" style="margin-top: -40px;">
+                        <div class="item-media">
+                            <i class="material-icons" style="font-size: 30px; color: lightgrey">edit</i>
+                        </div>
+                        <div class="item-inner" data-page="page-content-plan-name">
+
+                        </div>
+                        <script id="my-content-plan-name" type="text/template7">
+                                <div class="item-title-row">
+                                    <div class="item-title" style="white-space: initial;">{{name}}</div>
+                                    <div class="item-after"></div>
+                                </div>
+                                <div class="item-subtitle">
+                                </div>
+                            </script>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="list" data-page="page-plan-content" style="margin-top: -22px;">
+            
+                
+           
+        </div>
+        <script id="my-plan-content" type="text/template7">  
+            <ul>
+            <li>
+                <a href="/edit_plan/?id_plan={{id_plan}}" class="item-link item-content">
+                    <div class="item-media">
+                        <i class="material-icons">link</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title">
+                            <div class="item-header">Thay đổi thông tin lịch trình</div>
+                            <div class="item-footer">
+                                Chọn để thực hiện
+                            </div>
+                        </div>
+                        <div class="item-after"></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/create_day/?plan_id={{plan_id}}" class="item-link item-content">
+                    <div class="item-media">
+                        <i class="material-icons">playlist_add</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title">
+                            <div class="item-header">Thêm địa điểm</div>
+                            <div class="item-footer">
+                                Chọn để thực hiện
+                            </div>
+                        </div>
+                        <div class="item-after"></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/list_plan/?day_plan_id_create={{plan_id}}" class="item-link item-content">
+                    <div class="item-media">
+                        <i class="material-icons">link</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title">
+                            <div class="item-header">Quản lý danh sách địa điểm</div>
+                            <div class="item-footer">
+                                Chọn để thực hiện
+                            </div>
+                        </div>
+                        <div class="item-after"></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/list_commentplan/?commentplan_id={{plan_id}}" class="item-link item-content">
+                    <div class="item-media">
+                        <i class="material-icons">link</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title">
+                            <div class="item-header">Quản lý danh sách bình luận</div>
+                            <div class="item-footer">
+                                Chọn để thực hiện
+                            </div>
+                        </div>
+                        <div class="item-after"></div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        </script>
+        <div class="list media-list" style="margin-top: -20px;">
+            <ul>
+                <li>
+                    <span class="item-content">
+                        <div class="item-inner" data-page="page-content-plan-introduce">
+
+                        </div>
+                        <script id="my-content-plan-introduce" type="text/template7">
+                                <div class="item-title" style="white-space: inherit;">
+                                        <div class="item-header" style="font-size: 15px;">Giới thiệu</div>
+                                        <div class="item-footer" style="font-size: 14px;">
+                                            <span style="font-weight: bold;">Ngày bắt đầu: </span> {{start}}
+                                    </div>
+                                    <div class="item-footer" style="font-size: 14px;">
+                                        <span style="font-weight: bold;">Ngày kết thúc: </span> {{end}}
+                                    </div>
+                                        <div class="item-footer" style="font-size: 14px;">
+                                            <span style="font-weight: bold;">Địa điểm bắt đầu: </span> {{startpoint}}
+                                        </div>
+                                        <div class="item-footer" style="font-size: 14px;">
+                                            <span style="font-weight: bold;">Địa điểm đến: </span> {{arrivalpoint}}
+                                        </div>
+                                        <div class="item-footer" style="font-size: 14px;">
+                                            <span style="font-weight: bold;">Giá dự kiến chuyến đi: </span> {{price_plan}}đ
+                                        </div>
+                                    </div>
+                                    <div class="item-after"></div>
+                            </script>
+                    </span>
+                </li>
+            </ul>
+            <ul class="list-from-detail-content" data-page="page-name-from-detail-content">
+                    
+            </ul>
+            <ul class="list-form-rate" data-page="page-content-plan-comment">
+
+            </ul>
+            <ul id="list-content-plan-comment">
+
+            </ul>
+        </div>
+        <script id="my-name-from-detail-content" type="text/template7">
+            <li>
+                <div class="item-content">
+                        <a href="/content_place/?place_id={{place_id}}" class="item-link item-content">
+                            <div class="item-media">
+                                <img src="{{image}}" width="68px" height="68px" />
+                            </div>
+
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">{{name}}</div>
+                                    <div class="item-after">{{date}}</div>
+                                </div>
+                                <div class="item-subtitle">Timemove: {{timemove}}</div>
+                                <div class="item-subtitle">Timevisit: {{timevisit}}</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sortable-handler"></div>
+                </li>
+        </script>
+
+        <script id="my-content-plan-comment" type="text/template7">
+            <li>
+                  <a class="item-content">
+                      <div class="item-media">
+                          <img src="{{image_user}}" width="50" class="message-avatar" />
+                      </div>
+                      <div class="item-inner">
+                          <div class="item-title-row">
+                              <div class="item-title" style="font-size: 14px;">{{username}}</div>
+                              <div class="item-after" style="font-size: 12px;">{{created}}</div>
+                          </div>
+                          <div class="item-text" style="font-size: 11px;">{{content}}</div>
+                      </div>
+                  </a>
+              </li>
+        </script>
+
+        <div class="preloader infinite-scroll-preloader"></div>
+        
+    </div>
+    
+</div>

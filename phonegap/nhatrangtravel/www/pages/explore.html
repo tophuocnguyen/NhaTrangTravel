@@ -1,0 +1,282 @@
+<div class="page" data-name="explore">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="title" style="text-align: center; width: 100%;">Khám phá</div>
+    </div>
+  </div>
+  <!-- Additional "tabbar-scrollable" class -->
+  <div class="toolbar tabbar tabbar-scrollable">
+    <div class="toolbar-inner">
+      <a href="#tab-1-explore" class="tab-link tab-link-active">Nổi bậc</a>
+      <a href="#tab-2-explore" class="tab-link">Theo loại</a>
+      <a href="#tab-3-explore" class="tab-link">Của tôi</a>
+      <a href="#tab-4-explore" class="tab-link">Chuyến đi</a>
+    </div>
+  </div>
+
+
+  <!-- FAB Right Bottom -->
+  <!-- Will morph to Toolbar -->
+  <div class="fab fab-right-bottom">
+    <a href="#" style="background: #00CCCC; width: 45px; height: 45px;">
+      <!-- Icons For iOS Theme -->
+      <i class="icon f7-icons ios-only">add</i>
+      <i class="icon f7-icons ios-only">close</i>
+      <!-- Icons For MD Theme -->
+      <i class="icon material-icons md-only">add</i>
+      <i class="icon material-icons md-only">close</i>
+    </a>
+    <!-- FAB speed dial actions -->
+    <div class="fab-buttons fab-buttons-left">
+      <a href="/add_review/" style="background: #00CCCC;">
+        <i class="material-icons">edit</i>
+      </a>
+      <a href="/create_plan/" style="background: #00CCCC;">
+        <i class="material-icons">directions_run</i>
+      </a>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div id="tab-1-explore" class="page-content tab tab-active" data-page="page-review-feature">
+    </div>
+    <script id="my-review-feature" type="text/template7">
+      {{#if user_id_save}}
+      <div class="card demo-facebook-card">
+        <div class="card-header">
+          <div class="demo-facebook-avatar">
+            <a href="/content_user/?user_id={{user_id}}">
+              <img src="{{avatar_user_review_feature}}" width="36" height="36" class="message-avatar" />
+            </a>
+          </div>
+          <a href="/content_user/?user_id={{user_id}}">
+            <div class="demo-facebook-name">{{user_name_review_feature}}</div>
+          </a>
+          <div class="demo-facebook-date">{{created_review_feature}}</div>
+        </div>
+        <a href="/content_review/?review_id={{id_review_feature}}" style="color: #212121">
+        <div class="card-content card-content-padding">
+          <p>{{name_review_feature}}</p>
+          <img src="{{image_review_feature}}" width="100%" />
+          <p class="likes">Thích: {{count_like_review}}  Bình luận: {{count_comment_review}}</p>
+        </div>
+      </a>
+      </div>
+      {{else}}
+      <div class="card demo-facebook-card">
+        <div class="card-header">
+          <div class="demo-facebook-avatar">
+            <a href="/login/">
+              <img src="{{avatar_user_review_feature}}" width="36" height="36" class="message-avatar" />
+            </a>
+          </div>
+          <a href="/login/">
+            <div class="demo-facebook-name">{{user_name_review_feature}}</div>
+          </a>
+          <div class="demo-facebook-date">{{created_review_feature}}</div>
+        </div>
+        <a href="/content_review/?review_id={{id_review_feature}}" style="color: #212121">
+        <div class="card-content card-content-padding">
+          <p>{{name_review_feature}}</p>
+          <img src="{{image_review_feature}}" width="100%" />
+          <p class="likes">Thích: {{count_like_review}}  Bình luận: {{count_comment_review}}</p>
+        </div>
+      </a>
+      </div>
+      {{/if}}
+  </script>
+
+    <div id="tab-2-explore" class="page-content tab">
+      <div class="list">
+        <ul>
+          <!-- Open In Sheet -->
+          <li>
+            <a class="item-link smart-select smart-select-init typereview" data-open-in="sheet">
+              <select name="typereview" id="typereview">
+
+              </select>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Chọn loại</div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script id="my-typereview" type="text/template7">
+        {{#js_if "this.typereview_id === 1"}}
+        <option value="{{typereview_id}}" selected>{{typereview_name}}</option>
+        {{else}}
+        <option value="{{typereview_id}}">{{typereview_name}}</option>
+        {{/js_if}}
+    </script>
+    <span class="typereview-content"data-page="page-typereview-content">
+      
+    </span>
+    <script id="my-typereview-content" type="text/template7">
+      {{#if user_id_save}}
+      <div class="card demo-facebook-card">
+        <div class="card-header">
+          <div class="demo-facebook-avatar">
+            <a href="/content_user/?user_id={{user_id}}">
+              <img src="{{avatar_user_review_feature}}" width="36" height="36" class="message-avatar" />
+            </a>
+          </div>
+          <a href="/content_user/?user_id={{user_id}}">
+            <div class="demo-facebook-name">{{user_name_review_feature}}</div>
+          </a>
+          <div class="demo-facebook-date">{{created_review_feature}}</div>
+        </div>
+        <a href="/content_review/?review_id={{id_review_feature}}" style="color: #212121">
+        <div class="card-content card-content-padding">
+          <p>{{name_review_feature}}</p>
+          <img src="{{image_review_feature}}" width="100%" />
+          <p class="likes">Thích: {{count_like_review}}  Bình luận: {{count_comment_review}}</p>
+        </div>
+      </a>
+      </div>
+      {{else}}
+      <div class="card demo-facebook-card">
+        <div class="card-header">
+          <div class="demo-facebook-avatar">
+            <a href="/login/">
+              <img src="{{avatar_user_review_feature}}" width="36" height="36" class="message-avatar" />
+            </a>
+          </div>
+          <a href="/login/">
+            <div class="demo-facebook-name">{{user_name_review_feature}}</div>
+          </a>
+          <div class="demo-facebook-date">{{created_review_feature}}</div>
+        </div>
+        <a href="/content_review/?review_id={{id_review_feature}}" style="color: #212121">
+        <div class="card-content card-content-padding">
+          <p>{{name_review_feature}}</p>
+          <img src="{{image_review_feature}}" width="100%" />
+          <p class="likes">Thích: {{count_like_review}}  Bình luận: {{count_comment_review}}</p>
+        </div>
+      </a>
+      </div>
+      {{/if}}
+  </script>
+
+    </div>
+    <div id="tab-3-explore" class="page-content tab" data-page="page-review-user">
+        <div class="list">
+            <ul>
+                <!-- Open In Sheet -->
+                <li>
+                    <a class="item-link smart-select smart-select-init typereview-tab3" data-open-in="sheet">
+                        <select name="typereview-tab3" id="typereview-tab3">
+                            <option value="review" selected>Bài review</option>
+                            <option value="plan">Chuyến đi</option>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">Chọn loại</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <span class="review-user" data-page="page-review-user">
+           
+          </span>
+
+    </div>
+    <script id="my-review-user" type="text/template7">
+      <div class="card demo-facebook-card">
+        <div class="card-header">
+          <div class="demo-facebook-avatar">
+            <img src="{{avatar_user_review_user}}" width="36" height="36" class="message-avatar" />
+          </div>
+          <div class="demo-facebook-name">{{user_name_review_user}}</div>
+          <div class="demo-facebook-date">{{created_review_user}}</div>
+        </div>
+        <a href="/content_review/?review_id={{id_review_user}}" style="color: #212121">
+        <div class="card-content card-content-padding">
+          <p>{{name_review_user}}</p>
+          <img src="{{image_review_user}}" width="100%" />
+          <p class="likes">Thích: {{count_like_review}}  Bình luận: {{count_comment_review}}</p>
+        </div>
+      </a>
+      </div>
+      
+  </script>
+  <script id="my-plan-user" type="text/template7">
+    <div class="card demo-facebook-card">
+      <div class="card-header">
+        <div class="demo-facebook-avatar">
+          <img src="{{avatar_user_plan_user}}" width="36" height="36" class="message-avatar" />
+        </div>
+        <div class="demo-facebook-name">{{user_name_plan_user}}</div>
+        <div class="demo-facebook-date">{{created_plan_user}}</div>
+      </div>
+      <a href="/content_plans/?plan_id={{id_plan_user}}" style="color: #212121">
+      <div class="card-content card-content-padding">
+        <p>{{name_plan_user}}</p>
+        <img src="{{image_plan_user}}" width="100%" />
+        <p class="likes">Thích: {{count_like_plan}}  Bình luận: {{count_comment_plan}}</p>
+      </div>
+    </a>
+    </div>
+    
+</script>
+
+    <div id="tab-4-explore" class="page-content tab" data-page="page-trip-plan">
+    
+    </div>
+    <script id="my-trip-plan" type="text/template7">
+      
+
+
+      {{#if user_id_save}}
+      <div class="card demo-facebook-card">
+        <div class="card-header">
+          <div class="demo-facebook-avatar">
+            <a href="/content_user/?user_id={{user_id}}">
+              <img src="{{avatar_user_trip_plan}}" width="36" height="36" class="message-avatar" />
+            </a>
+          </div>
+          <a href="/content_user/?user_id={{user_id}}">
+            <div class="demo-facebook-name">{{user_name_trip_plan}}</div>
+          </a>
+          <div class="demo-facebook-date">{{created_trip_plan}}</div>
+        </div>
+        <a href="/content_plans/?id_trip_plan={{id_trip_plan}}" style="color: #212121">
+        <div class="card-content card-content-padding">
+          <p>{{name_trip_plan}}</p>
+          <img src="{{image_trip_plan}}" width="100%" />
+          <p class="likes">Thích: {{count_like_plan}}  Bình luận: {{count_comment_plan}}</p>
+        </div>
+      </a>
+      </div>
+      {{else}}
+      <div class="card demo-facebook-card">
+        <div class="card-header">
+          <div class="demo-facebook-avatar">
+            <a href="/login/">
+              <img src="{{avatar_user_trip_plan}}" width="36" height="36" class="message-avatar" />
+            </a>
+          </div>
+          <a href="/login/">
+            <div class="demo-facebook-name">{{user_name_trip_plan}}</div>
+          </a>
+          <div class="demo-facebook-date">{{created_trip_plan}}</div>
+        </div>
+        <a href="/content_plans/?id_trip_plan={{id_trip_plan}}" style="color: #212121">
+        <div class="card-content card-content-padding">
+          <p>{{name_trip_plan}}</p>
+          <img src="{{image_trip_plan}}" width="100%" />
+          <p class="likes">Thích: {{count_like_plan}}  Bình luận: {{count_comment_plan}}</p>
+        </div>
+      </a>
+      </div>
+      {{/if}}
+
+
+  </script>
+
+  </div>
+</div>

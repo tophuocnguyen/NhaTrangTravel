@@ -1,0 +1,67 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title">Messages</div>
+        </div>
+    </div>
+    <div class="toolbar messagebar">
+        <div class="toolbar-inner">
+            <div class="messagebar-area">
+                <textarea class="resizable" placeholder="Nhập tin nhắn"></textarea>
+            </div>
+            <a class="link send-link" href="#">Gửi</a>
+        </div>
+        <div class="toolbar-inner">
+            <div class="messagebar-area">
+                <textarea class="resizable" name="comment-review" placeholder="Nhập bình luận"></textarea>
+            </div>
+            <a class="#" href="#"></a>
+        </div>
+    </div>
+    <div class="page-content messages-content">
+        <div class="messages" data-page="my-messages">
+            <!-- Full layout received message -->
+            
+            <!-- Messages -->
+            
+        </div>
+
+        <script id="my-messages-sent" type="text/template7">
+            <div class="message message-sent">
+                <div class="message-avatar" style="background-image:url({{user_from_image}});"></div>
+                <div class="message-content">
+                    <div class="message-name">{{user_from_name}}</div>
+                    <div class="message-header"></div>
+                    <div class="message-bubble">
+                        <div class="message-text-header"></div>
+                        <div class="message-text">{{user_from_content}}</div>
+                        <div class="message-text-footer">{{user_from_created}}</div>
+                    </div>
+                    <div class="message-footer"></div>
+                </div>
+            </div>
+        </script>
+        <script id="my-messages-received" type="text/template7">
+            <div class="message message-received">
+                <div class="message-avatar" style="background-image:url({{user_to_image}});"></div>
+                <div class="message-content">
+                    <div class="message-name">{{user_to_name}}</div>
+                    <div class="message-header"></div>
+                    <div class="message-bubble">
+                        <div class="message-text-header"></div>
+                        <div class="message-text">{{user_to_content}}</div>
+                        <div class="message-text-footer">{{user_to_created}}</div>
+                    </div>
+                    <div class="message-footer"></div>
+                </div>
+            </div>
+        </script>
+
+    </div>
+</div>

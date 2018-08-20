@@ -1,0 +1,90 @@
+<div class="page" data-name="search-map-restaurants">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Bản đồ quán ăn</div>
+        <div class="subnavbar">
+  
+          <form class="searchbar" id="my-form">
+            <div class="searchbar-inner">
+              <div class="searchbar-input-wrap">
+                <input type="search" name="name" placeholder="Nhập địa điểm cần tìm" id="autocomplete-dropdown-ajax-typeahead">
+  
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <div class="col">
+                <a class="button button-small color-white text-color-blue Find-place" href="#">Tìm</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div style="position: absolute;
+              top: 17%;
+              left: 65%;
+              z-index: 5;
+              text-align: left;
+              font-family: 'Roboto','sans-serif';
+              line-height: 30px;
+              width: 170px;
+              ">
+        <form id="khungnhaplieu">
+          <fieldset>
+            <div class="col">
+              <a class="button button-small color-yellow text-color-white convert-form-to-data" href="#" style="background:#2196f3">Tìm đường đi</a>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+  
+      
+  
+      
+  
+  
+  
+      <div style="position: absolute;
+              top: 16%;   
+              z-index: 5;
+              text-align: left;
+              font-family: 'Roboto','sans-serif';
+              line-height: 30px;
+              width: 170px;
+              margin-left: -4%;
+              ">
+        <form id="khungnhaplieu1">
+          <fieldset>
+              
+            <li>
+              <select id="id_travelMode" name="KC" class="find-distance" style="height: 33px">
+                <option value="" class="find-distance">Chọn khoảng cách</option>
+                <option value="1" class="find-distance">1 Km</option>
+                <option value="5" class="find-distance">5 Km</option>
+                <option value="10" class="find-distance">10 Km</option>
+                <option value="15" class="find-distance">15 Km</option>
+                <option value="20" class="find-distance">20 Km</option>
+                <option value="25" class="find-distance">25 Km</option>
+                <option value="30" class="find-distance">30 Km</option>
+                <option value="35" class="find-distance">35 Km</option>
+              </select>
+  
+            </li>
+          </fieldset>
+  
+        </form>
+  
+  
+      </div>
+      <!-- <div id="left" style="height: 100%;width: 58%;"></div> -->
+      <div id="googleMap" style=" position: absolute; height: 78%; width: 100%;"></div>
+  
+    </div>
+  </div>

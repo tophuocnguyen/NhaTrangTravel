@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>My App</title>
+
+  <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Search Bar</div>
+              <div class="subnavbar">
+                <!-- Searchbar with auto init -->
+                <form class="searchbar">
+                  <div class="searchbar-inner">
+                    <div class="searchbar-input-wrap">
+                      <input type="search" placeholder="Search">
+                      <i class="searchbar-icon"></i>
+                      <span class="input-clear-button"></span>
+                    </div>
+                    <span class="searchbar-disable-button">Cancel</span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <!-- Searchbar backdrop -->
+            <div class="searchbar-backdrop"></div>
+            <!-- hide-on-search element -->
+            <div class="block searchbar-hide-on-search">
+              <p>This block will be hidden on search. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <!-- search target list -->
+            <div class="list searchbar-found">
+              <ul>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Acura</div>
+                  </div>
+                </li>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Audi</div>
+                  </div>
+                </li>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">BMW</div>
+                  </div>
+                </li>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Volvo</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Nothing found message -->
+            <div class="block searchbar-not-found">
+              <div class="block-inner">Nothing found</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+  <script src="./js/template7.min.js"></script>
+  <script type="text/javascript" src="./js/map.js">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+}
+/* A bit of demo styles */;
+.demo-swiper .swiper-slide {
+  font-size: 25px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000;
+}
+.demo-swiper .swiper-slide {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.demo-swiper {
+  margin: 0px 0 35px;
+  font-size: 18px;
+  height: 100%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide {
+  width: 85%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+  width: 70%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+  width: 30%;
+}
+
+/* Facebook card */
+.demo-facebook-card .card-header {
+  display: block;
+  padding: 10px;
+}
+.demo-facebook-card .demo-facebook-avatar {
+  float: left;
+}
+.demo-facebook-card .demo-facebook-name {
+  margin-left: 44px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.demo-facebook-card .demo-facebook-date {
+  margin-left: 44px;
+  font-size: 13px;
+  color: #8e8e93;
+}
+.demo-facebook-card .card-footer {
+  background: #fafafa;
+}
+.demo-facebook-card .card-footer a {
+  color: #81848b;
+  font-weight: 500;
+}
+.demo-facebook-card .card-content img {
+  display: block;
+}
+.demo-facebook-card .card-content-padding {
+  padding: 15px 10px;
+}
+.demo-facebook-card .card-content-padding .likes {
+  color: #8e8e93;
+}
+
+.demo-card-header-pic .card-header {
+  height: 60vw;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.demo-card-header-pic .card-content-padding .date{
+  color: #8e8e93;
+}
+
+/*rating */
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+/* like */
+
+.fa {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}

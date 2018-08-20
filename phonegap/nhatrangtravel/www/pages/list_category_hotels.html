@@ -1,0 +1,63 @@
+<div class="page">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">Back</span>
+                    </a>
+                </div>
+                <div class="title">Loại chỗ ở</div>
+            </div>
+        </div>
+    
+        <div class="page-content">
+            <div class="block" style="margin: 0 0; padding: 0 0;">
+                <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="border: none;">
+                            <a href="#" class="pb-standalone-dark">
+                                <img src="./img/banner.jpg" width="100%" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide" style="border: none;">
+                            <img src="./img/banner.jpg" width="100%" />
+                        </div>
+                        <div class="swiper-slide" style="border: none;">
+                            <img src="./img/banner.jpg" width="100%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="list-category-hotel" data-page="my-list-category-hotel">
+                
+            </span>
+            <script id="my-list-category-hotel" type="text/template7">
+                <div class="block-title">
+                    {{name_typehotels}}
+                    <a class="link" href="/list_hotels/?typehotels_id={{typehotels_id}}" style="float: right; font-size: 13px;">
+                        Xem thêm
+                        <i class="material-icons">keyboard_arrow_right</i>
+                    </a>
+                </div>
+    
+                <div class="block">
+                    <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20" data-slides-per-view="2" class="swiper-container swiper-init demo-swiper">
+                        <!--<div class="swiper-pagination"></div>-->
+                        <div class="swiper-wrapper" data-page="list-category-hotel-slide">
+                            
+                        </div>
+                    </div>
+                </div>
+            </script>
+            <script id="my-list-category-hotel-slide" type="text/template7">
+                <div class="swiper-slide" style="border : none; width: 154px; margin-right: 20px;">
+                    <a href="/list_hotels/?hotel_id={{hotel_id}}">
+                    <img src="{{image_hotel}}" style="width: 100%" /> <br/>
+                    <span style="font-size: 14px; color: #212121">{{name_hotel}}</span>
+                    </a>
+                  </div>
+            </script>
+        </div>
+    </div>

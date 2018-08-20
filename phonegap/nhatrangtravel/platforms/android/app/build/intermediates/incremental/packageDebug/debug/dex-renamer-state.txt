@@ -1,0 +1,4 @@
+#Mon Jul 16 06:26:24 ICT 2018
+base.0=F\:\\doan\\phonegap\\nhatrangtravel\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=F\:\\doan\\phonegap\\nhatrangtravel\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

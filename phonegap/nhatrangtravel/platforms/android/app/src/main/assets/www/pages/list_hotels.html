@@ -1,0 +1,322 @@
+<div class="page" data-name="list-hotel">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title" style="text-align: center; width: 100%;">Loại chỗ ở</div>
+            <div class="right">
+                <a href="/search_hotels/" class="link">
+                    <i class="material-icons">search</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="list" style="margin-top: 5px;">
+            <ul>
+                <!-- Open In Sheet -->
+                <li>
+                    <a class="item-link smart-select smart-select-init typehotel" data-open-in="sheet">
+                        <select name="typehotel" id="typehotel">
+
+                        </select>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">Chọn loại</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-link smart-select smart-select-init typeprice" data-open-in="sheet">
+                        <select name="typeprice" id="typeprice">
+                            <option value="500">Dưới 500</option>
+                            <option value="500-1000">Từ 500 - 1tr</option>
+                            <option value="1000-1500">Từ 1tr - 1tr5</option>
+                            <option value="1500-2000">Từ 1tr5 - 2tr</option>
+                            <option value="2000">Trên 2tr</option>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">Chọn giá</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script id="my-typehotel" type="text/template7">
+          {{#js_if "this.typehotel_id === 1"}}
+          <option value="{{typehotel_id}}" selected>{{typehotel_name}}</option>
+          {{else}}
+          <option value="{{typehotel_id}}">{{typehotel_name}}</option>
+          {{/js_if}}
+        </script>
+
+        <span class="typehotel-content" data-page="page-typehotel-content">
+
+        </span>
+        <script id="my-typehotel-content" type="text/template7">
+            {{#js_if "this.avg < 0.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;" style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.4 && this.avg < 1"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 0.9 && this.avg < 1.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.4 && this.avg < 2"}}
+            <a>
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_halfr</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 1.9 && this.avg < 2.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.4 && this.avg < 3"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 2.9 && this.avg < 3.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.4 && this.avg < 4"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 3.9 && this.avg < 4.5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_border</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.4 && this.avg < 5"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star_half</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+            {{#js_if "this.avg > 4.9"}}
+            <a href="/content_hotels/?hotel_id={{id_hotel_feature}}" style="color: #212121;">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url({{image_hotel_feature}})" class="card-header align-items-flex-end">{{name_hotel_feature}}</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">{{created_hotel_feature}}</p>
+                    <p>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <i class="material-icons" style="width: 17px; color: gold;">star</i>
+                        <span style="color: lightgray; margin-top: 5px; position: absolute; margin-left: 15px;">
+                            {{avg}}
+                        </span>
+                    </p>
+                    <p style="font-weight: bold;">Giá trung bình: {{price}}đ</p>
+                    <div style="font-size: 12px; color: #222222">{{kc}}</div>
+                    <p style ="white-space: nowrap; overflow: hidden;">{{description_hotel_feature}}</p>
+                </div>
+            </div>
+            </a>
+            {{/js_if}
+        </script>
+        <div class="preloader infinite-scroll-preloader"></div>
+    </div>
+
+</div>

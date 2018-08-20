@@ -1,0 +1,79 @@
+<div class="page" data-name="add-evaluate">
+        <div class="navbar">
+          <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                  <i class="icon icon-back"></i>
+                  <span class="ios-only">Back</span>
+                </a>
+              </div>
+              <div class="title">Create evaluate</div>
+              <div class="right" style="padding-right: 3%">
+                    <a class="add-evaluate">Add</a>
+                </div>
+          </div>
+        </div>
+        <div class="page-content">
+        <form class="list" id="my-form">
+            <div class="block-title" style="color: #000;">Evaluate</div>
+            <div class="list accordion-list">
+                <ul>
+                    <li>
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-input-wrap">
+                                  <div style="padding-left: 38%">Standard</div>
+                                  <div id="star-rating" style="padding-bottom: 3%; padding-top: 2%; padding-left: 32%">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <!-- <span id="info"></span> -->
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </li> 
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-input-wrap">
+                                <input type="text" name="name" placeholder="Title">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+            </div>    
+            <!-- Custom Accordion -->
+    
+            <div class="list list accordion-list" style="margin-top: -9%">
+                    <ul>
+                      <li class="item-content item-input">
+                              <div class="item-inner">
+                                <div class="item-input-wrap">
+                                      <textarea placeholder="Descripton" required validate name="descripton" placeholder="descripton"></textarea>
+                                </div>
+                              </div>
+                          </li>
+                          <li class="item-content item-input">
+                              <div class="item-inner">
+                                <div class="item-input-wrap">
+                                <input id="inputFileToLoad" type="file" />
+                                <div id="imgTest" name="IMG">
+                                  <img src="" id="image1" style="width: 44%;">
+                                </div>
+                                <a class="button button-fill button-round encodeImageFileAsURL" href="#" style="width: 29%;">Add image</a>
+                                </div>
+                              </div>
+                          </li>
+                    </ul>
+                  </div>
+                  <!-- <div class="col"><a class="button button-fill button-round add-evaluate link back" href="#">ADD</a></div> -->
+        </form>
+    
+        </div>
+      </div>

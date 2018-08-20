@@ -1,0 +1,113 @@
+<div class="page" data-name="create-trip">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+          <div class="title">Thay đổi lịch trình</div>
+      </div>
+    </div>
+    <div class="page-content">
+        <form class="list" id="my-form">
+      <div class="list no-hairlines-md">
+          <ul>
+              <li class="item-content item-input">
+                  <div class="item-media">
+                    <i class="material-icons">place</i>
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title item-label">Tên chuyến đi</div>
+                    <div class="item-input-wrap">
+                      <input id="name-plan" type="text" placeholder="Hãy nhận tên chuyến đi">
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+              <li class="item-content item-input">
+                <div class="item-media">
+                  <i class="material-icons">my_location</i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title item-label">Địa điểm xuất phát</div>
+                  <div class="item-input-wrap">
+                    <input id="start-point" type="text" placeholder="Hãy nhập tên địa điểm xuất phát" name="startpoint">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                  <div class="item-media">
+                    <i class="material-icons">location_on</i>
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title item-label">địa điểm đến</div>
+                    <div class="item-input-wrap">
+                      <input id="arrival-point" type="text" placeholder="Hãy nhập tên địa điểm đến" name="arrivalpoint">
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+              
+              <li class="item-content item-input">
+                <div class="item-media">
+                  <i class="material-icons">today</i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title item-label">Ngày xuất phát</div>
+                  <div class="item-input-wrap">
+                    
+                    <input type="date" placeholder="Ngày xuất phát" required validate name="startdate" id="start-date">
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                  <div class="item-media">
+                    <i class="material-icons">event</i>
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title item-label">Ngày kết thúc</div>
+                    <div class="item-input-wrap">
+                      
+                      <input type="date" placeholder="Ngày kết thúc chuyến đi" required validate name="returndate" id="return-date">
+                    </div>
+                  </div>
+                </li>
+                
+                <li class="item-content item-input">
+                    
+
+                    <div class="item-media">
+                        <i class="material-icons">lock</i>
+                    </div>
+
+          
+                    <div class="item-inner">
+                        <div class="item-title">Riêng tư?</div>
+                        </div>
+                    <label class="toggle toggle-init toggle-init">
+                      <input type="checkbox" id="private">
+                      <span class="toggle-icon" style="left: -40%;"></span>
+                    </label>
+                  </li>
+             
+            </ul>
+            <!-- <div class="col">
+            <a class="button button-fill button-round add-trip" >ADD</a>
+          </div> -->
+            <!-- <div class="col create-plan-id" data-page="page-create-plan-id">
+                <a class="button button-fill button-round add-trip" >ADD</a>
+            </div>
+            <script id="my-create-plan-id" type="text/template7">
+              <a class="button button-fill button-round add-trip" href="/list_plan/?plan_id={{plan_id}}" style="margin-top: 5%">ADD</a>
+          </script> -->
+      </div>
+    </form>
+    <div class="block block-strong row">
+        <div class="col"><a class="button edit-plan" href="#">Edit</a></div>
+        <div class="col"><a class="button delete-plan" href="#">Delete</a></div>
+      </div>
+    </div>
+  </div>

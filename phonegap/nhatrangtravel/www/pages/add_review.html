@@ -1,0 +1,100 @@
+<div class="page" data-name="add-review">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="ios-only">Back</span>
+            </a>
+          </div>
+          <div class="title">Create review</div>
+          <div class="right" style="padding-right: 3%">
+              <a class="add-review">Add</a>
+          </div>
+      </div>
+    </div>
+    <div class="page-content">
+    <form class="list" id="my-form" style="margin-top: -7%">
+        <div class="list accordion-list">
+          <ul>
+            <li>
+                <div class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-input-wrap">
+                            <input type="text" name="title" placeholder="Title">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-content">
+              <div class="item-input">
+                <input type="text" placeholder="Name place" id="autocomplete-dropdown-ajax-typeahead" name="name"></div>
+            </li>
+            <li>
+              <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                <select name="type">
+                  <option value="hotel" selected>Hotel</option>
+                  <option value="restaurant">Restaurant</option>
+                  <option value="place">Thing to do</option>
+                </select>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Type place</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item-content item-input item-input-with-info" style="height: 29px;">
+              <div class="item-inner">
+                    <div class="item-input-wrap">
+                      <input type="text" name="address" placeholder="address" required validate>
+                      <span class="input-clear-button"></span>
+                  </div>
+              </div>
+          </li>         
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-input-wrap">
+                    <textarea placeholder="Your descripton" required validate name="descripton" placeholder="descripton"></textarea>
+                    <span class="input-clear-button"></span>
+              </div>
+            </div>
+        </li>
+      
+        <li class="item-content item-input">
+          <div class="item-inner" style="padding-bottom: 0px">
+            <div class="item-input-wrap">
+            <input id="inputFileToLoad" type="file" />
+            <div id="imgTest" name="IMG">
+              <img src="" id="image1" style="width: 44%;">
+            </div>
+            <a class="button button-fill button-round encodeImageFileAsURL" href="#" style="width: 29%;">Add image</a>
+            </div>
+          </div>
+      </li>
+    </ul>
+        </div>
+        <!-- Custom Accordion -->
+              <!-- <div class="list-block inputs-list theme-indigo">
+                <div class="item-content">
+                    <div class="item-media button button-raised button-fill color-indigo fileUpload">
+                        <span class="ico_upload"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+                        <input id="tx_file_programa" name="IMAGE" type="file" class="upload"/>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <input id="file_lectura" name="IMAGE1" readonly type="text" placeholder=""/>
+                      </div>
+                    </div>
+                </div>
+            </div> -->
+              <!-- <input class="button button-big button-fill" type='file' id='_file' accept="image/*;capture=camera"> -->
+              
+              <!-- <div class="col"><a class="button button-fill button-round add-review" href="#">ADD</a></div> -->
+    </form>
+
+
+
+
+    </div>
+  </div>
